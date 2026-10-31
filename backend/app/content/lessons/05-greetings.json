@@ -1,0 +1,1007 @@
+{
+  "version": 1,
+  "slug": "greetings",
+  "position": 5,
+  "title": "Chào hỏi phổ thông",
+  "description": "Luyện câu chào, cảm ơn, xin lỗi, tạm biệt, tự giới thiệu và các câu giao tiếp thường dùng. Gõ romaji theo cách đọc tự nhiên; trợ từ は đọc wa, へ đọc e, を đọc o.",
+  "items": [
+    {
+      "key": "p-ohayou",
+      "prompt": "おはよう",
+      "readings": [
+        "おはよう"
+      ],
+      "kind": "phrase",
+      "meaning": "Chào buổi sáng (thân mật)",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-ohayou-gozaimasu",
+      "prompt": "おはよう ございます",
+      "readings": [
+        "おはよう ございます"
+      ],
+      "kind": "phrase",
+      "meaning": "Chào buổi sáng (lịch sự)",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-konnichiwa",
+      "prompt": "こんにちは",
+      "readings": [
+        "こんにちわ",
+        "こんにちは"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin chào (ban ngày)",
+      "tags": [
+        "greeting",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-konbanwa",
+      "prompt": "こんばんは",
+      "readings": [
+        "こんばんわ",
+        "こんばんは"
+      ],
+      "kind": "phrase",
+      "meaning": "Chào buổi tối",
+      "tags": [
+        "greeting",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-oyasumi",
+      "prompt": "おやすみ",
+      "readings": [
+        "おやすみ"
+      ],
+      "kind": "phrase",
+      "meaning": "Chúc ngủ ngon (thân mật)",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-oyasuminasai",
+      "prompt": "おやすみなさい",
+      "readings": [
+        "おやすみなさい"
+      ],
+      "kind": "phrase",
+      "meaning": "Chúc ngủ ngon (lịch sự)",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-ogenkidesuka",
+      "prompt": "おげんきですか？",
+      "readings": [
+        "おげんきですか"
+      ],
+      "kind": "phrase",
+      "meaning": "Anh/chị có khỏe không?",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-hai-genkidesu",
+      "prompt": "はい、げんきです",
+      "readings": [
+        "はい げんきです"
+      ],
+      "kind": "phrase",
+      "meaning": "Vâng, tôi khỏe",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-okagesamade",
+      "prompt": "おかげさまで",
+      "readings": [
+        "おかげさまで"
+      ],
+      "kind": "phrase",
+      "meaning": "Nhờ ơn anh/chị, tôi vẫn khỏe (đáp lời hỏi thăm)",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-ii-tenkidesune",
+      "prompt": "いい てんきですね",
+      "readings": [
+        "いい てんきですね"
+      ],
+      "kind": "phrase",
+      "meaning": "Trời đẹp nhỉ",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-ohisashiburidesu",
+      "prompt": "おひさしぶりです",
+      "readings": [
+        "おひさしぶりです"
+      ],
+      "kind": "phrase",
+      "meaning": "Lâu rồi không gặp",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-nihone-youkoso",
+      "prompt": "にほんへ ようこそ",
+      "readings": [
+        "にほんえ ようこそ",
+        "にほんへ ようこそ"
+      ],
+      "kind": "phrase",
+      "meaning": "Chào mừng đến Nhật Bản",
+      "tags": [
+        "greeting",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-irasshaimase",
+      "prompt": "いらっしゃいませ",
+      "readings": [
+        "いらっしゃいませ"
+      ],
+      "kind": "phrase",
+      "meaning": "Kính chào quý khách (ở cửa hàng)",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-moshimoshi",
+      "prompt": "もしもし",
+      "readings": [
+        "もしもし"
+      ],
+      "kind": "phrase",
+      "meaning": "A lô (khi gọi điện thoại)",
+      "tags": [
+        "greeting"
+      ]
+    },
+    {
+      "key": "p-arigatou",
+      "prompt": "ありがとう",
+      "readings": [
+        "ありがとう"
+      ],
+      "kind": "phrase",
+      "meaning": "Cảm ơn (thân mật)",
+      "tags": [
+        "thanks"
+      ]
+    },
+    {
+      "key": "p-arigatou-gozaimasu",
+      "prompt": "ありがとう ございます",
+      "readings": [
+        "ありがとう ございます"
+      ],
+      "kind": "phrase",
+      "meaning": "Cảm ơn (lịch sự)",
+      "tags": [
+        "thanks"
+      ]
+    },
+    {
+      "key": "p-doumo-arigatou-gozaimasu",
+      "prompt": "どうも ありがとう ございます",
+      "readings": [
+        "どうも ありがとう ございます"
+      ],
+      "kind": "phrase",
+      "meaning": "Cảm ơn rất nhiều",
+      "tags": [
+        "thanks"
+      ]
+    },
+    {
+      "key": "p-douitashimashite",
+      "prompt": "どういたしまして",
+      "readings": [
+        "どういたしまして"
+      ],
+      "kind": "phrase",
+      "meaning": "Không có gì (đáp lời cảm ơn)",
+      "tags": [
+        "thanks"
+      ]
+    },
+    {
+      "key": "p-omedetou-gozaimasu",
+      "prompt": "おめでとう ございます",
+      "readings": [
+        "おめでとう ございます"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin chúc mừng",
+      "tags": [
+        "wishes"
+      ]
+    },
+    {
+      "key": "p-akemashite-omedetou-gozaimasu",
+      "prompt": "あけまして おめでとう ございます",
+      "readings": [
+        "あけまして おめでとう ございます"
+      ],
+      "kind": "phrase",
+      "meaning": "Chúc mừng năm mới",
+      "tags": [
+        "wishes"
+      ]
+    },
+    {
+      "key": "p-osewani-narimashita",
+      "prompt": "おせわに なりました",
+      "readings": [
+        "おせわに なりました"
+      ],
+      "kind": "phrase",
+      "meaning": "Cảm ơn anh/chị đã giúp đỡ thời gian qua",
+      "tags": [
+        "thanks"
+      ]
+    },
+    {
+      "key": "p-sumimasen",
+      "prompt": "すみません",
+      "readings": [
+        "すみません"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin lỗi / Cho tôi hỏi (khi gọi ai đó)",
+      "tags": [
+        "apology"
+      ]
+    },
+    {
+      "key": "p-gomennasai",
+      "prompt": "ごめんなさい",
+      "readings": [
+        "ごめんなさい"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin lỗi",
+      "tags": [
+        "apology"
+      ]
+    },
+    {
+      "key": "p-moushiwake-arimasen",
+      "prompt": "もうしわけ ありません",
+      "readings": [
+        "もうしわけ ありません"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi thành thật xin lỗi (rất lịch sự)",
+      "tags": [
+        "apology"
+      ]
+    },
+    {
+      "key": "p-shitsureishimasu",
+      "prompt": "しつれいします",
+      "readings": [
+        "しつれいします"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi xin phép (khi vào, ra hoặc làm phiền)",
+      "tags": [
+        "apology"
+      ]
+    },
+    {
+      "key": "p-shitsureishimashita",
+      "prompt": "しつれいしました",
+      "readings": [
+        "しつれいしました"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin lỗi đã làm phiền / Tôi xin phép (khi rời đi)",
+      "tags": [
+        "apology"
+      ]
+    },
+    {
+      "key": "p-omataseshimashita",
+      "prompt": "おまたせしました",
+      "readings": [
+        "おまたせしました"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin lỗi đã để anh/chị phải chờ",
+      "tags": [
+        "apology"
+      ]
+    },
+    {
+      "key": "p-sayounara",
+      "prompt": "さようなら",
+      "readings": [
+        "さようなら"
+      ],
+      "kind": "phrase",
+      "meaning": "Tạm biệt",
+      "tags": [
+        "farewell"
+      ]
+    },
+    {
+      "key": "p-jaa-mata",
+      "prompt": "じゃあ また",
+      "readings": [
+        "じゃあ また"
+      ],
+      "kind": "phrase",
+      "meaning": "Hẹn gặp lại nhé",
+      "tags": [
+        "farewell"
+      ]
+    },
+    {
+      "key": "p-mata-ashita",
+      "prompt": "また あした",
+      "readings": [
+        "また あした"
+      ],
+      "kind": "phrase",
+      "meaning": "Mai gặp lại nhé",
+      "tags": [
+        "farewell"
+      ]
+    },
+    {
+      "key": "p-matane",
+      "prompt": "またね",
+      "readings": [
+        "またね"
+      ],
+      "kind": "phrase",
+      "meaning": "Gặp lại sau nhé (thân mật)",
+      "tags": [
+        "farewell"
+      ]
+    },
+    {
+      "key": "p-kio-tsukete",
+      "prompt": "きを つけて",
+      "readings": [
+        "きお つけて",
+        "きを つけて"
+      ],
+      "kind": "phrase",
+      "meaning": "Cẩn thận nhé / Bảo trọng",
+      "tags": [
+        "farewell",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-odaijini",
+      "prompt": "おだいじに",
+      "readings": [
+        "おだいじに"
+      ],
+      "kind": "phrase",
+      "meaning": "Chúc mau khỏe (nói với người ốm)",
+      "tags": [
+        "farewell"
+      ]
+    },
+    {
+      "key": "p-mata-atode",
+      "prompt": "また あとで",
+      "readings": [
+        "また あとで"
+      ],
+      "kind": "phrase",
+      "meaning": "Lát nữa gặp lại nhé",
+      "tags": [
+        "farewell"
+      ]
+    },
+    {
+      "key": "p-hajimemashite",
+      "prompt": "はじめまして",
+      "readings": [
+        "はじめまして"
+      ],
+      "kind": "phrase",
+      "meaning": "Rất vui được làm quen (lần đầu gặp)",
+      "tags": [
+        "introduction"
+      ]
+    },
+    {
+      "key": "p-watashiwa-betonamujindesu",
+      "prompt": "わたしは ベトナムじんです",
+      "readings": [
+        "わたしわ ベトナムじんです",
+        "わたしは ベトナムじんです"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi là người Việt Nam",
+      "tags": [
+        "introduction",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-betonamukara-kimashita",
+      "prompt": "ベトナムから きました",
+      "readings": [
+        "ベトナムから きました"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi đến từ Việt Nam",
+      "tags": [
+        "introduction"
+      ]
+    },
+    {
+      "key": "p-yoroshiku-onegaishimasu",
+      "prompt": "よろしく おねがいします",
+      "readings": [
+        "よろしく おねがいします"
+      ],
+      "kind": "phrase",
+      "meaning": "Rất mong được giúp đỡ",
+      "tags": [
+        "introduction"
+      ]
+    },
+    {
+      "key": "p-douzo-yoroshiku-onegaishimasu",
+      "prompt": "どうぞ よろしく おねがいします",
+      "readings": [
+        "どうぞ よろしく おねがいします"
+      ],
+      "kind": "phrase",
+      "meaning": "Rất mong nhận được sự giúp đỡ (lịch sự hơn)",
+      "tags": [
+        "introduction"
+      ]
+    },
+    {
+      "key": "p-kochirakoso",
+      "prompt": "こちらこそ",
+      "readings": [
+        "こちらこそ"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi cũng vậy / Chính tôi mới phải nói thế",
+      "tags": [
+        "introduction"
+      ]
+    },
+    {
+      "key": "p-onamaewa",
+      "prompt": "おなまえは？",
+      "readings": [
+        "おなまえわ",
+        "おなまえは"
+      ],
+      "kind": "phrase",
+      "meaning": "Bạn tên là gì?",
+      "tags": [
+        "introduction",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-okuniwa-dochiradesuka",
+      "prompt": "おくには どちらですか？",
+      "readings": [
+        "おくにわ どちらですか",
+        "おくには どちらですか"
+      ],
+      "kind": "phrase",
+      "meaning": "Anh/chị đến từ nước nào?",
+      "tags": [
+        "introduction",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-nansaidesuka",
+      "prompt": "なんさいですか？",
+      "readings": [
+        "なんさいですか"
+      ],
+      "kind": "phrase",
+      "meaning": "Bạn bao nhiêu tuổi?",
+      "tags": [
+        "introduction"
+      ]
+    },
+    {
+      "key": "p-oshigotowa-nandesuka",
+      "prompt": "おしごとは なんですか？",
+      "readings": [
+        "おしごとわ なんですか",
+        "おしごとは なんですか"
+      ],
+      "kind": "phrase",
+      "meaning": "Anh/chị làm nghề gì?",
+      "tags": [
+        "introduction",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-gakuseidesu",
+      "prompt": "がくせいです",
+      "readings": [
+        "がくせいです"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi là sinh viên / học sinh",
+      "tags": [
+        "introduction"
+      ]
+    },
+    {
+      "key": "p-nihongoo-benkyoushite-imasu",
+      "prompt": "にほんごを べんきょうして います",
+      "readings": [
+        "にほんごお べんきょうして います",
+        "にほんごを べんきょうして います"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi đang học tiếng Nhật",
+      "tags": [
+        "introduction",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-nihongoga-sukoshi-wakarimasu",
+      "prompt": "にほんごが すこし わかります",
+      "readings": [
+        "にほんごが すこし わかります"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi hiểu một chút tiếng Nhật",
+      "tags": [
+        "introduction"
+      ]
+    },
+    {
+      "key": "p-hajimemashou",
+      "prompt": "はじめましょう",
+      "readings": [
+        "はじめましょう"
+      ],
+      "kind": "phrase",
+      "meaning": "Chúng ta bắt đầu nào",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-wakarimashitaka",
+      "prompt": "わかりましたか？",
+      "readings": [
+        "わかりましたか"
+      ],
+      "kind": "phrase",
+      "meaning": "Các bạn đã hiểu chưa?",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-wakarimashita",
+      "prompt": "わかりました",
+      "readings": [
+        "わかりました"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi hiểu rồi / Vâng, tôi rõ rồi",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-wakarimasen",
+      "prompt": "わかりません",
+      "readings": [
+        "わかりません"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi không hiểu",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-shitsumonga-arimasu",
+      "prompt": "しつもんが あります",
+      "readings": [
+        "しつもんが あります"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi có câu hỏi",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-mou-ichido-onegaishimasu",
+      "prompt": "もう いちど おねがいします",
+      "readings": [
+        "もう いちど おねがいします"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin nhắc lại một lần nữa",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-yukkuri-hanashite-kudasai",
+      "prompt": "ゆっくり はなして ください",
+      "readings": [
+        "ゆっくり はなして ください"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin hãy nói chậm lại",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-korewa-nihongode-nandesuka",
+      "prompt": "これは にほんごで なんですか？",
+      "readings": [
+        "これわ にほんごで なんですか",
+        "これは にほんごで なんですか"
+      ],
+      "kind": "phrase",
+      "meaning": "Cái này tiếng Nhật gọi là gì?",
+      "tags": [
+        "classroom",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-mite-kudasai",
+      "prompt": "みて ください",
+      "readings": [
+        "みて ください"
+      ],
+      "kind": "phrase",
+      "meaning": "Hãy nhìn",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-kiite-kudasai",
+      "prompt": "きいて ください",
+      "readings": [
+        "きいて ください"
+      ],
+      "kind": "phrase",
+      "meaning": "Hãy nghe",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-yonde-kudasai",
+      "prompt": "よんで ください",
+      "readings": [
+        "よんで ください"
+      ],
+      "kind": "phrase",
+      "meaning": "Hãy đọc",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-kaite-kudasai",
+      "prompt": "かいて ください",
+      "readings": [
+        "かいて ください"
+      ],
+      "kind": "phrase",
+      "meaning": "Hãy viết",
+      "tags": [
+        "classroom"
+      ]
+    },
+    {
+      "key": "p-imiwa-nandesuka",
+      "prompt": "いみは なんですか？",
+      "readings": [
+        "いみわ なんですか",
+        "いみは なんですか"
+      ],
+      "kind": "phrase",
+      "meaning": "Nghĩa là gì?",
+      "tags": [
+        "classroom",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-itadakimasu",
+      "prompt": "いただきます",
+      "readings": [
+        "いただきます"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin phép bắt đầu ăn (nói trước khi ăn)",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-gochisousamadeshita",
+      "prompt": "ごちそうさまでした",
+      "readings": [
+        "ごちそうさまでした"
+      ],
+      "kind": "phrase",
+      "meaning": "Cảm ơn vì bữa ăn (nói sau khi ăn)",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-ittekimasu",
+      "prompt": "いってきます",
+      "readings": [
+        "いってきます"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi đi đây (khi ra khỏi nhà)",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-itterasshai",
+      "prompt": "いってらっしゃい",
+      "readings": [
+        "いってらっしゃい"
+      ],
+      "kind": "phrase",
+      "meaning": "Đi cẩn thận nhé (đáp lại いってきます)",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-tadaima",
+      "prompt": "ただいま",
+      "readings": [
+        "ただいま"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi về rồi đây",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-okaerinasai",
+      "prompt": "おかえりなさい",
+      "readings": [
+        "おかえりなさい"
+      ],
+      "kind": "phrase",
+      "meaning": "Mừng bạn đã về (đáp lại ただいま)",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-otsukaresamadesu",
+      "prompt": "おつかれさまです",
+      "readings": [
+        "おつかれさまです"
+      ],
+      "kind": "phrase",
+      "meaning": "Anh/chị vất vả rồi (chào đồng nghiệp)",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-osakini-shitsureishimasu",
+      "prompt": "おさきに しつれいします",
+      "readings": [
+        "おさきに しつれいします"
+      ],
+      "kind": "phrase",
+      "meaning": "Tôi xin phép về trước",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-ojamashimasu",
+      "prompt": "おじゃまします",
+      "readings": [
+        "おじゃまします"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin phép làm phiền (khi vào nhà người khác)",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-onegaishimasu",
+      "prompt": "おねがいします",
+      "readings": [
+        "おねがいします"
+      ],
+      "kind": "phrase",
+      "meaning": "Làm ơn / Nhờ anh/chị giúp",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-douzo",
+      "prompt": "どうぞ",
+      "readings": [
+        "どうぞ"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin mời",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-chotto-matte-kudasai",
+      "prompt": "ちょっと まって ください",
+      "readings": [
+        "ちょっと まって ください"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin đợi một chút",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-koreo-kudasai",
+      "prompt": "これを ください",
+      "readings": [
+        "これお ください",
+        "これを ください"
+      ],
+      "kind": "phrase",
+      "meaning": "Cho tôi cái này",
+      "tags": [
+        "daily",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-ikuradesuka",
+      "prompt": "いくらですか？",
+      "readings": [
+        "いくらですか"
+      ],
+      "kind": "phrase",
+      "meaning": "Bao nhiêu tiền?",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-toirewa-dokodesuka",
+      "prompt": "トイレは どこですか？",
+      "readings": [
+        "トイレわ どこですか",
+        "トイレは どこですか"
+      ],
+      "kind": "phrase",
+      "meaning": "Nhà vệ sinh ở đâu?",
+      "tags": [
+        "daily",
+        "particle"
+      ]
+    },
+    {
+      "key": "p-osakini-douzo",
+      "prompt": "おさきに どうぞ",
+      "readings": [
+        "おさきに どうぞ"
+      ],
+      "kind": "phrase",
+      "meaning": "Xin mời anh/chị trước",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-daijoubudesu",
+      "prompt": "だいじょうぶです",
+      "readings": [
+        "だいじょうぶです"
+      ],
+      "kind": "phrase",
+      "meaning": "Không sao đâu / Tôi ổn",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-hai-soudesu",
+      "prompt": "はい、そうです",
+      "readings": [
+        "はい そうです"
+      ],
+      "kind": "phrase",
+      "meaning": "Vâng, đúng vậy",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-iie-chigaimasu",
+      "prompt": "いいえ、ちがいます",
+      "readings": [
+        "いいえ ちがいます"
+      ],
+      "kind": "phrase",
+      "meaning": "Không, không phải",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-soudesuka",
+      "prompt": "そうですか",
+      "readings": [
+        "そうですか"
+      ],
+      "kind": "phrase",
+      "meaning": "Thế à / Vậy sao",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "key": "p-ganbatte",
+      "prompt": "がんばって",
+      "readings": [
+        "がんばって"
+      ],
+      "kind": "phrase",
+      "meaning": "Cố lên!",
+      "tags": [
+        "daily"
+      ]
+    }
+  ]
+}

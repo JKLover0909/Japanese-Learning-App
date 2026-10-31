@@ -1,0 +1,952 @@
+{
+  "version": 1,
+  "slug": "numbers",
+  "position": 6,
+  "title": "Luyện số 1–100",
+  "description": "Luyện cách đọc các số từ 1 đến 100. Với một số số như 4, 7, 9 có nhiều cách đọc hợp lệ.",
+  "items": [
+    {
+      "key": "n-1",
+      "prompt": "1",
+      "readings": [
+        "いち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-2",
+      "prompt": "2",
+      "readings": [
+        "に"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-3",
+      "prompt": "3",
+      "readings": [
+        "さん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-4",
+      "prompt": "4",
+      "readings": [
+        "よん",
+        "し"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-5",
+      "prompt": "5",
+      "readings": [
+        "ご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-6",
+      "prompt": "6",
+      "readings": [
+        "ろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-7",
+      "prompt": "7",
+      "readings": [
+        "なな",
+        "しち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-8",
+      "prompt": "8",
+      "readings": [
+        "はち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-9",
+      "prompt": "9",
+      "readings": [
+        "きゅう",
+        "く"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-10",
+      "prompt": "10",
+      "readings": [
+        "じゅう"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-11",
+      "prompt": "11",
+      "readings": [
+        "じゅういち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-12",
+      "prompt": "12",
+      "readings": [
+        "じゅうに"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-13",
+      "prompt": "13",
+      "readings": [
+        "じゅうさん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-14",
+      "prompt": "14",
+      "readings": [
+        "じゅうよん",
+        "じゅうし"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-15",
+      "prompt": "15",
+      "readings": [
+        "じゅうご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-16",
+      "prompt": "16",
+      "readings": [
+        "じゅうろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-17",
+      "prompt": "17",
+      "readings": [
+        "じゅうなな",
+        "じゅうしち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-18",
+      "prompt": "18",
+      "readings": [
+        "じゅうはち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-19",
+      "prompt": "19",
+      "readings": [
+        "じゅうきゅう",
+        "じゅうく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-20",
+      "prompt": "20",
+      "readings": [
+        "にじゅう"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-21",
+      "prompt": "21",
+      "readings": [
+        "にじゅういち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-22",
+      "prompt": "22",
+      "readings": [
+        "にじゅうに"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-23",
+      "prompt": "23",
+      "readings": [
+        "にじゅうさん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-24",
+      "prompt": "24",
+      "readings": [
+        "にじゅうよん",
+        "にじゅうし"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-25",
+      "prompt": "25",
+      "readings": [
+        "にじゅうご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-26",
+      "prompt": "26",
+      "readings": [
+        "にじゅうろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-27",
+      "prompt": "27",
+      "readings": [
+        "にじゅうなな",
+        "にじゅうしち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-28",
+      "prompt": "28",
+      "readings": [
+        "にじゅうはち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-29",
+      "prompt": "29",
+      "readings": [
+        "にじゅうきゅう",
+        "にじゅうく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-30",
+      "prompt": "30",
+      "readings": [
+        "さんじゅう"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-31",
+      "prompt": "31",
+      "readings": [
+        "さんじゅういち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-32",
+      "prompt": "32",
+      "readings": [
+        "さんじゅうに"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-33",
+      "prompt": "33",
+      "readings": [
+        "さんじゅうさん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-34",
+      "prompt": "34",
+      "readings": [
+        "さんじゅうよん",
+        "さんじゅうし"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-35",
+      "prompt": "35",
+      "readings": [
+        "さんじゅうご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-36",
+      "prompt": "36",
+      "readings": [
+        "さんじゅうろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-37",
+      "prompt": "37",
+      "readings": [
+        "さんじゅうなな",
+        "さんじゅうしち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-38",
+      "prompt": "38",
+      "readings": [
+        "さんじゅうはち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-39",
+      "prompt": "39",
+      "readings": [
+        "さんじゅうきゅう",
+        "さんじゅうく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-40",
+      "prompt": "40",
+      "readings": [
+        "よんじゅう"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-41",
+      "prompt": "41",
+      "readings": [
+        "よんじゅういち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-42",
+      "prompt": "42",
+      "readings": [
+        "よんじゅうに"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-43",
+      "prompt": "43",
+      "readings": [
+        "よんじゅうさん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-44",
+      "prompt": "44",
+      "readings": [
+        "よんじゅうよん",
+        "よんじゅうし"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-45",
+      "prompt": "45",
+      "readings": [
+        "よんじゅうご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-46",
+      "prompt": "46",
+      "readings": [
+        "よんじゅうろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-47",
+      "prompt": "47",
+      "readings": [
+        "よんじゅうなな",
+        "よんじゅうしち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-48",
+      "prompt": "48",
+      "readings": [
+        "よんじゅうはち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-49",
+      "prompt": "49",
+      "readings": [
+        "よんじゅうきゅう",
+        "よんじゅうく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-50",
+      "prompt": "50",
+      "readings": [
+        "ごじゅう"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-51",
+      "prompt": "51",
+      "readings": [
+        "ごじゅういち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-52",
+      "prompt": "52",
+      "readings": [
+        "ごじゅうに"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-53",
+      "prompt": "53",
+      "readings": [
+        "ごじゅうさん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-54",
+      "prompt": "54",
+      "readings": [
+        "ごじゅうよん",
+        "ごじゅうし"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-55",
+      "prompt": "55",
+      "readings": [
+        "ごじゅうご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-56",
+      "prompt": "56",
+      "readings": [
+        "ごじゅうろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-57",
+      "prompt": "57",
+      "readings": [
+        "ごじゅうなな",
+        "ごじゅうしち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-58",
+      "prompt": "58",
+      "readings": [
+        "ごじゅうはち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-59",
+      "prompt": "59",
+      "readings": [
+        "ごじゅうきゅう",
+        "ごじゅうく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-60",
+      "prompt": "60",
+      "readings": [
+        "ろくじゅう"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-61",
+      "prompt": "61",
+      "readings": [
+        "ろくじゅういち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-62",
+      "prompt": "62",
+      "readings": [
+        "ろくじゅうに"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-63",
+      "prompt": "63",
+      "readings": [
+        "ろくじゅうさん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-64",
+      "prompt": "64",
+      "readings": [
+        "ろくじゅうよん",
+        "ろくじゅうし"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-65",
+      "prompt": "65",
+      "readings": [
+        "ろくじゅうご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-66",
+      "prompt": "66",
+      "readings": [
+        "ろくじゅうろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-67",
+      "prompt": "67",
+      "readings": [
+        "ろくじゅうなな",
+        "ろくじゅうしち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-68",
+      "prompt": "68",
+      "readings": [
+        "ろくじゅうはち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-69",
+      "prompt": "69",
+      "readings": [
+        "ろくじゅうきゅう",
+        "ろくじゅうく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-70",
+      "prompt": "70",
+      "readings": [
+        "ななじゅう",
+        "しちじゅう"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-71",
+      "prompt": "71",
+      "readings": [
+        "ななじゅういち",
+        "しちじゅういち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-72",
+      "prompt": "72",
+      "readings": [
+        "ななじゅうに",
+        "しちじゅうに"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-73",
+      "prompt": "73",
+      "readings": [
+        "ななじゅうさん",
+        "しちじゅうさん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-74",
+      "prompt": "74",
+      "readings": [
+        "ななじゅうよん",
+        "ななじゅうし",
+        "しちじゅうよん",
+        "しちじゅうし"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-75",
+      "prompt": "75",
+      "readings": [
+        "ななじゅうご",
+        "しちじゅうご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-76",
+      "prompt": "76",
+      "readings": [
+        "ななじゅうろく",
+        "しちじゅうろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-77",
+      "prompt": "77",
+      "readings": [
+        "ななじゅうなな",
+        "ななじゅうしち",
+        "しちじゅうなな",
+        "しちじゅうしち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-78",
+      "prompt": "78",
+      "readings": [
+        "ななじゅうはち",
+        "しちじゅうはち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-79",
+      "prompt": "79",
+      "readings": [
+        "ななじゅうきゅう",
+        "ななじゅうく",
+        "しちじゅうきゅう",
+        "しちじゅうく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-80",
+      "prompt": "80",
+      "readings": [
+        "はちじゅう"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-81",
+      "prompt": "81",
+      "readings": [
+        "はちじゅういち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-82",
+      "prompt": "82",
+      "readings": [
+        "はちじゅうに"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-83",
+      "prompt": "83",
+      "readings": [
+        "はちじゅうさん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-84",
+      "prompt": "84",
+      "readings": [
+        "はちじゅうよん",
+        "はちじゅうし"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-85",
+      "prompt": "85",
+      "readings": [
+        "はちじゅうご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-86",
+      "prompt": "86",
+      "readings": [
+        "はちじゅうろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-87",
+      "prompt": "87",
+      "readings": [
+        "はちじゅうなな",
+        "はちじゅうしち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-88",
+      "prompt": "88",
+      "readings": [
+        "はちじゅうはち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-89",
+      "prompt": "89",
+      "readings": [
+        "はちじゅうきゅう",
+        "はちじゅうく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-90",
+      "prompt": "90",
+      "readings": [
+        "きゅうじゅう"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-91",
+      "prompt": "91",
+      "readings": [
+        "きゅうじゅういち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-92",
+      "prompt": "92",
+      "readings": [
+        "きゅうじゅうに"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-93",
+      "prompt": "93",
+      "readings": [
+        "きゅうじゅうさん"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-94",
+      "prompt": "94",
+      "readings": [
+        "きゅうじゅうよん",
+        "きゅうじゅうし"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-95",
+      "prompt": "95",
+      "readings": [
+        "きゅうじゅうご"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-96",
+      "prompt": "96",
+      "readings": [
+        "きゅうじゅうろく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-97",
+      "prompt": "97",
+      "readings": [
+        "きゅうじゅうなな",
+        "きゅうじゅうしち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-98",
+      "prompt": "98",
+      "readings": [
+        "きゅうじゅうはち"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-99",
+      "prompt": "99",
+      "readings": [
+        "きゅうじゅうきゅう",
+        "きゅうじゅうく"
+      ],
+      "kind": "number",
+      "meaning": null
+    },
+    {
+      "key": "n-100",
+      "prompt": "100",
+      "readings": [
+        "ひゃく"
+      ],
+      "kind": "number",
+      "meaning": null
+    }
+  ]
+}

@@ -1,0 +1,2579 @@
+{
+  "version": 1,
+  "slug": "hiragana-extended",
+  "position": 2,
+  "title": "Hiragana: biến âm, âm ghép, trường âm, âm ngắt",
+  "description": "Hiragana mở rộng: chữ có dấu biến âm ゛ ゜ (が, ぱ...), âm ghép với ゃ ゅ ょ (きゃ, しゅ, ちょ...), âm ngắt っ (gõ đôi phụ âm: がっこう = gakkou) và trường âm (おかあさん, とうきょう, せんせい). Gồm 58 chữ và các từ thông dụng hằng ngày.",
+  "items": [
+    {
+      "key": "c-ga",
+      "prompt": "が",
+      "readings": [
+        "が"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-gi",
+      "prompt": "ぎ",
+      "readings": [
+        "ぎ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-gu",
+      "prompt": "ぐ",
+      "readings": [
+        "ぐ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-ge",
+      "prompt": "げ",
+      "readings": [
+        "げ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-go",
+      "prompt": "ご",
+      "readings": [
+        "ご"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-za",
+      "prompt": "ざ",
+      "readings": [
+        "ざ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-ji",
+      "prompt": "じ",
+      "readings": [
+        "じ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-zu",
+      "prompt": "ず",
+      "readings": [
+        "ず"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-ze",
+      "prompt": "ぜ",
+      "readings": [
+        "ぜ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-zo",
+      "prompt": "ぞ",
+      "readings": [
+        "ぞ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-da",
+      "prompt": "だ",
+      "readings": [
+        "だ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-di",
+      "prompt": "ぢ",
+      "readings": [
+        "ぢ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-du",
+      "prompt": "づ",
+      "readings": [
+        "づ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-de",
+      "prompt": "で",
+      "readings": [
+        "で"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-do",
+      "prompt": "ど",
+      "readings": [
+        "ど"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-ba",
+      "prompt": "ば",
+      "readings": [
+        "ば"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-bi",
+      "prompt": "び",
+      "readings": [
+        "び"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-bu",
+      "prompt": "ぶ",
+      "readings": [
+        "ぶ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-be",
+      "prompt": "べ",
+      "readings": [
+        "べ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-bo",
+      "prompt": "ぼ",
+      "readings": [
+        "ぼ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-pa",
+      "prompt": "ぱ",
+      "readings": [
+        "ぱ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "c-pi",
+      "prompt": "ぴ",
+      "readings": [
+        "ぴ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "c-pu",
+      "prompt": "ぷ",
+      "readings": [
+        "ぷ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "c-pe",
+      "prompt": "ぺ",
+      "readings": [
+        "ぺ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "c-po",
+      "prompt": "ぽ",
+      "readings": [
+        "ぽ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "c-kya",
+      "prompt": "きゃ",
+      "readings": [
+        "きゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-kyu",
+      "prompt": "きゅ",
+      "readings": [
+        "きゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-kyo",
+      "prompt": "きょ",
+      "readings": [
+        "きょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-sha",
+      "prompt": "しゃ",
+      "readings": [
+        "しゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-shu",
+      "prompt": "しゅ",
+      "readings": [
+        "しゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-sho",
+      "prompt": "しょ",
+      "readings": [
+        "しょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-cha",
+      "prompt": "ちゃ",
+      "readings": [
+        "ちゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-chu",
+      "prompt": "ちゅ",
+      "readings": [
+        "ちゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-cho",
+      "prompt": "ちょ",
+      "readings": [
+        "ちょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-nya",
+      "prompt": "にゃ",
+      "readings": [
+        "にゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-nyu",
+      "prompt": "にゅ",
+      "readings": [
+        "にゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-nyo",
+      "prompt": "にょ",
+      "readings": [
+        "にょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-hya",
+      "prompt": "ひゃ",
+      "readings": [
+        "ひゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-hyu",
+      "prompt": "ひゅ",
+      "readings": [
+        "ひゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-hyo",
+      "prompt": "ひょ",
+      "readings": [
+        "ひょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-mya",
+      "prompt": "みゃ",
+      "readings": [
+        "みゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-myu",
+      "prompt": "みゅ",
+      "readings": [
+        "みゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-myo",
+      "prompt": "みょ",
+      "readings": [
+        "みょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-rya",
+      "prompt": "りゃ",
+      "readings": [
+        "りゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-ryu",
+      "prompt": "りゅ",
+      "readings": [
+        "りゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-ryo",
+      "prompt": "りょ",
+      "readings": [
+        "りょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "c-gya",
+      "prompt": "ぎゃ",
+      "readings": [
+        "ぎゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-gyu",
+      "prompt": "ぎゅ",
+      "readings": [
+        "ぎゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-gyo",
+      "prompt": "ぎょ",
+      "readings": [
+        "ぎょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-ja",
+      "prompt": "じゃ",
+      "readings": [
+        "じゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-ju",
+      "prompt": "じゅ",
+      "readings": [
+        "じゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-jo",
+      "prompt": "じょ",
+      "readings": [
+        "じょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-bya",
+      "prompt": "びゃ",
+      "readings": [
+        "びゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-byu",
+      "prompt": "びゅ",
+      "readings": [
+        "びゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-byo",
+      "prompt": "びょ",
+      "readings": [
+        "びょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "dakuten"
+      ]
+    },
+    {
+      "key": "c-pya",
+      "prompt": "ぴゃ",
+      "readings": [
+        "ぴゃ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "handakuten"
+      ]
+    },
+    {
+      "key": "c-pyu",
+      "prompt": "ぴゅ",
+      "readings": [
+        "ぴゅ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "handakuten"
+      ]
+    },
+    {
+      "key": "c-pyo",
+      "prompt": "ぴょ",
+      "readings": [
+        "ぴょ"
+      ],
+      "kind": "char",
+      "meaning": null,
+      "tags": [
+        "youon",
+        "handakuten"
+      ]
+    },
+    {
+      "key": "w-kitte",
+      "prompt": "きって",
+      "readings": [
+        "きって"
+      ],
+      "kind": "word",
+      "meaning": "tem thư",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-kippu",
+      "prompt": "きっぷ",
+      "readings": [
+        "きっぷ"
+      ],
+      "kind": "word",
+      "meaning": "vé (tàu, xe)",
+      "tags": [
+        "handakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-zasshi",
+      "prompt": "ざっし",
+      "readings": [
+        "ざっし"
+      ],
+      "kind": "word",
+      "meaning": "tạp chí",
+      "tags": [
+        "dakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-nikki",
+      "prompt": "にっき",
+      "readings": [
+        "にっき"
+      ],
+      "kind": "word",
+      "meaning": "nhật ký",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-gakkou",
+      "prompt": "がっこう",
+      "readings": [
+        "がっこう"
+      ],
+      "kind": "word",
+      "meaning": "trường học",
+      "tags": [
+        "dakuten",
+        "sokuon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kekkon",
+      "prompt": "けっこん",
+      "readings": [
+        "けっこん"
+      ],
+      "kind": "word",
+      "meaning": "kết hôn",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-shippai",
+      "prompt": "しっぱい",
+      "readings": [
+        "しっぱい"
+      ],
+      "kind": "word",
+      "meaning": "thất bại",
+      "tags": [
+        "handakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-hikkoshi",
+      "prompt": "ひっこし",
+      "readings": [
+        "ひっこし"
+      ],
+      "kind": "word",
+      "meaning": "chuyển nhà",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-shippo",
+      "prompt": "しっぽ",
+      "readings": [
+        "しっぽ"
+      ],
+      "kind": "word",
+      "meaning": "cái đuôi",
+      "tags": [
+        "handakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-ippai",
+      "prompt": "いっぱい",
+      "readings": [
+        "いっぱい"
+      ],
+      "kind": "word",
+      "meaning": "đầy; nhiều",
+      "tags": [
+        "handakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-issho",
+      "prompt": "いっしょ",
+      "readings": [
+        "いっしょ"
+      ],
+      "kind": "word",
+      "meaning": "cùng nhau",
+      "tags": [
+        "youon",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-chotto",
+      "prompt": "ちょっと",
+      "readings": [
+        "ちょっと"
+      ],
+      "kind": "word",
+      "meaning": "một chút",
+      "tags": [
+        "youon",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-motto",
+      "prompt": "もっと",
+      "readings": [
+        "もっと"
+      ],
+      "kind": "word",
+      "meaning": "hơn nữa, thêm nữa",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-kitto",
+      "prompt": "きっと",
+      "readings": [
+        "きっと"
+      ],
+      "kind": "word",
+      "meaning": "chắc chắn, nhất định",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-yatto",
+      "prompt": "やっと",
+      "readings": [
+        "やっと"
+      ],
+      "kind": "word",
+      "meaning": "cuối cùng thì, mãi mới",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-zutto",
+      "prompt": "ずっと",
+      "readings": [
+        "ずっと"
+      ],
+      "kind": "word",
+      "meaning": "suốt, mãi; hơn hẳn",
+      "tags": [
+        "dakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-kotchi",
+      "prompt": "こっち",
+      "readings": [
+        "こっち"
+      ],
+      "kind": "word",
+      "meaning": "phía này, bên này",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-dotchi",
+      "prompt": "どっち",
+      "readings": [
+        "どっち"
+      ],
+      "kind": "word",
+      "meaning": "phía nào; cái nào (trong hai)",
+      "tags": [
+        "dakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-matcha",
+      "prompt": "まっちゃ",
+      "readings": [
+        "まっちゃ"
+      ],
+      "kind": "word",
+      "meaning": "bột trà xanh matcha",
+      "tags": [
+        "youon",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-shuppatsu",
+      "prompt": "しゅっぱつ",
+      "readings": [
+        "しゅっぱつ"
+      ],
+      "kind": "word",
+      "meaning": "xuất phát, khởi hành",
+      "tags": [
+        "handakuten",
+        "youon",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-zettai",
+      "prompt": "ぜったい",
+      "readings": [
+        "ぜったい"
+      ],
+      "kind": "word",
+      "meaning": "tuyệt đối, nhất định",
+      "tags": [
+        "dakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-kissaten",
+      "prompt": "きっさてん",
+      "readings": [
+        "きっさてん"
+      ],
+      "kind": "word",
+      "meaning": "quán cà phê, quán giải khát",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-asatte",
+      "prompt": "あさって",
+      "readings": [
+        "あさって"
+      ],
+      "kind": "word",
+      "meaning": "ngày kia, ngày mốt",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-sakki",
+      "prompt": "さっき",
+      "readings": [
+        "さっき"
+      ],
+      "kind": "word",
+      "meaning": "lúc nãy, vừa nãy",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-mikka",
+      "prompt": "みっか",
+      "readings": [
+        "みっか"
+      ],
+      "kind": "word",
+      "meaning": "ngày mùng 3; ba ngày",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-mittsu",
+      "prompt": "みっつ",
+      "readings": [
+        "みっつ"
+      ],
+      "kind": "word",
+      "meaning": "ba cái",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-isshoukenmei",
+      "prompt": "いっしょうけんめい",
+      "readings": [
+        "いっしょうけんめい"
+      ],
+      "kind": "word",
+      "meaning": "hết sức mình, chăm chỉ hết mình",
+      "tags": [
+        "youon",
+        "sokuon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kakkoii",
+      "prompt": "かっこいい",
+      "readings": [
+        "かっこいい"
+      ],
+      "kind": "word",
+      "meaning": "ngầu, đẹp trai",
+      "tags": [
+        "sokuon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-bikkuri",
+      "prompt": "びっくり",
+      "readings": [
+        "びっくり"
+      ],
+      "kind": "word",
+      "meaning": "giật mình, ngạc nhiên",
+      "tags": [
+        "dakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-yukkuri",
+      "prompt": "ゆっくり",
+      "readings": [
+        "ゆっくり"
+      ],
+      "kind": "word",
+      "meaning": "chậm rãi, thong thả",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-hakkiri",
+      "prompt": "はっきり",
+      "readings": [
+        "はっきり"
+      ],
+      "kind": "word",
+      "meaning": "rõ ràng",
+      "tags": [
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-yappari",
+      "prompt": "やっぱり",
+      "readings": [
+        "やっぱり"
+      ],
+      "kind": "word",
+      "meaning": "quả nhiên, rốt cuộc vẫn",
+      "tags": [
+        "handakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-massugu",
+      "prompt": "まっすぐ",
+      "readings": [
+        "まっすぐ"
+      ],
+      "kind": "word",
+      "meaning": "thẳng",
+      "tags": [
+        "dakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-roppyaku",
+      "prompt": "ろっぴゃく",
+      "readings": [
+        "ろっぴゃく"
+      ],
+      "kind": "word",
+      "meaning": "sáu trăm",
+      "tags": [
+        "handakuten",
+        "youon",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-ippun",
+      "prompt": "いっぷん",
+      "readings": [
+        "いっぷん"
+      ],
+      "kind": "word",
+      "meaning": "một phút",
+      "tags": [
+        "handakuten",
+        "sokuon"
+      ]
+    },
+    {
+      "key": "w-okaasan",
+      "prompt": "おかあさん",
+      "readings": [
+        "おかあさん"
+      ],
+      "kind": "word",
+      "meaning": "mẹ",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-otousan",
+      "prompt": "おとうさん",
+      "readings": [
+        "おとうさん"
+      ],
+      "kind": "word",
+      "meaning": "bố",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-oniisan",
+      "prompt": "おにいさん",
+      "readings": [
+        "おにいさん"
+      ],
+      "kind": "word",
+      "meaning": "anh trai",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-oneesan",
+      "prompt": "おねえさん",
+      "readings": [
+        "おねえさん"
+      ],
+      "kind": "word",
+      "meaning": "chị gái",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-ojiisan",
+      "prompt": "おじいさん",
+      "readings": [
+        "おじいさん"
+      ],
+      "kind": "word",
+      "meaning": "ông",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-obaasan",
+      "prompt": "おばあさん",
+      "readings": [
+        "おばあさん"
+      ],
+      "kind": "word",
+      "meaning": "bà",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-sensei",
+      "prompt": "せんせい",
+      "readings": [
+        "せんせい"
+      ],
+      "kind": "word",
+      "meaning": "thầy giáo, cô giáo",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-gakusei",
+      "prompt": "がくせい",
+      "readings": [
+        "がくせい"
+      ],
+      "kind": "word",
+      "meaning": "học sinh, sinh viên",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-tokei",
+      "prompt": "とけい",
+      "readings": [
+        "とけい"
+      ],
+      "kind": "word",
+      "meaning": "đồng hồ",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-eiga",
+      "prompt": "えいが",
+      "readings": [
+        "えいが"
+      ],
+      "kind": "word",
+      "meaning": "phim, điện ảnh",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-eigo",
+      "prompt": "えいご",
+      "readings": [
+        "えいご"
+      ],
+      "kind": "word",
+      "meaning": "tiếng Anh",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-yuumei",
+      "prompt": "ゆうめい",
+      "readings": [
+        "ゆうめい"
+      ],
+      "kind": "word",
+      "meaning": "nổi tiếng",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-hikouki",
+      "prompt": "ひこうき",
+      "readings": [
+        "ひこうき"
+      ],
+      "kind": "word",
+      "meaning": "máy bay",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kuukou",
+      "prompt": "くうこう",
+      "readings": [
+        "くうこう"
+      ],
+      "kind": "word",
+      "meaning": "sân bay",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-ginkou",
+      "prompt": "ぎんこう",
+      "readings": [
+        "ぎんこう"
+      ],
+      "kind": "word",
+      "meaning": "ngân hàng",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kouen",
+      "prompt": "こうえん",
+      "readings": [
+        "こうえん"
+      ],
+      "kind": "word",
+      "meaning": "công viên",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-doubutsu",
+      "prompt": "どうぶつ",
+      "readings": [
+        "どうぶつ"
+      ],
+      "kind": "word",
+      "meaning": "động vật",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-ookii",
+      "prompt": "おおきい",
+      "readings": [
+        "おおきい"
+      ],
+      "kind": "word",
+      "meaning": "to, lớn",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-tooi",
+      "prompt": "とおい",
+      "readings": [
+        "とおい"
+      ],
+      "kind": "word",
+      "meaning": "xa",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-ooi",
+      "prompt": "おおい",
+      "readings": [
+        "おおい"
+      ],
+      "kind": "word",
+      "meaning": "nhiều",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-toori",
+      "prompt": "とおり",
+      "readings": [
+        "とおり"
+      ],
+      "kind": "word",
+      "meaning": "đường phố, con đường",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-koori",
+      "prompt": "こおり",
+      "readings": [
+        "こおり"
+      ],
+      "kind": "word",
+      "meaning": "nước đá, băng",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-imouto",
+      "prompt": "いもうと",
+      "readings": [
+        "いもうと"
+      ],
+      "kind": "word",
+      "meaning": "em gái (của mình)",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-otouto",
+      "prompt": "おとうと",
+      "readings": [
+        "おとうと"
+      ],
+      "kind": "word",
+      "meaning": "em trai (của mình)",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kuuki",
+      "prompt": "くうき",
+      "readings": [
+        "くうき"
+      ],
+      "kind": "word",
+      "meaning": "không khí",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kinou",
+      "prompt": "きのう",
+      "readings": [
+        "きのう"
+      ],
+      "kind": "word",
+      "meaning": "hôm qua",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-reizouko",
+      "prompt": "れいぞうこ",
+      "readings": [
+        "れいぞうこ"
+      ],
+      "kind": "word",
+      "meaning": "tủ lạnh",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kirei",
+      "prompt": "きれい",
+      "readings": [
+        "きれい"
+      ],
+      "kind": "word",
+      "meaning": "đẹp; sạch sẽ",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-souji",
+      "prompt": "そうじ",
+      "readings": [
+        "そうじ"
+      ],
+      "kind": "word",
+      "meaning": "dọn dẹp",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-boushi",
+      "prompt": "ぼうし",
+      "readings": [
+        "ぼうし"
+      ],
+      "kind": "word",
+      "meaning": "cái mũ",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-iie",
+      "prompt": "いいえ",
+      "readings": [
+        "いいえ"
+      ],
+      "kind": "word",
+      "meaning": "không (lời phủ định)",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-futsuu",
+      "prompt": "ふつう",
+      "readings": [
+        "ふつう"
+      ],
+      "kind": "word",
+      "meaning": "bình thường",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-chiisai",
+      "prompt": "ちいさい",
+      "readings": [
+        "ちいさい"
+      ],
+      "kind": "word",
+      "meaning": "nhỏ, bé",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-keitai",
+      "prompt": "けいたい",
+      "readings": [
+        "けいたい"
+      ],
+      "kind": "word",
+      "meaning": "điện thoại di động",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-toufu",
+      "prompt": "とうふ",
+      "readings": [
+        "とうふ"
+      ],
+      "kind": "word",
+      "meaning": "đậu phụ",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-biyouin",
+      "prompt": "びよういん",
+      "readings": [
+        "びよういん"
+      ],
+      "kind": "word",
+      "meaning": "tiệm làm tóc, salon làm đẹp",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-bentou",
+      "prompt": "べんとう",
+      "readings": [
+        "べんとう"
+      ],
+      "kind": "word",
+      "meaning": "cơm hộp",
+      "tags": [
+        "dakuten",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kyou",
+      "prompt": "きょう",
+      "readings": [
+        "きょう"
+      ],
+      "kind": "word",
+      "meaning": "hôm nay",
+      "tags": [
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kyonen",
+      "prompt": "きょねん",
+      "readings": [
+        "きょねん"
+      ],
+      "kind": "word",
+      "meaning": "năm ngoái",
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "w-shashin",
+      "prompt": "しゃしん",
+      "readings": [
+        "しゃしん"
+      ],
+      "kind": "word",
+      "meaning": "ảnh, bức ảnh",
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "w-densha",
+      "prompt": "でんしゃ",
+      "readings": [
+        "でんしゃ"
+      ],
+      "kind": "word",
+      "meaning": "tàu điện",
+      "tags": [
+        "dakuten",
+        "youon"
+      ]
+    },
+    {
+      "key": "w-jitensha",
+      "prompt": "じてんしゃ",
+      "readings": [
+        "じてんしゃ"
+      ],
+      "kind": "word",
+      "meaning": "xe đạp",
+      "tags": [
+        "dakuten",
+        "youon"
+      ]
+    },
+    {
+      "key": "w-kaisha",
+      "prompt": "かいしゃ",
+      "readings": [
+        "かいしゃ"
+      ],
+      "kind": "word",
+      "meaning": "công ty",
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "w-isha",
+      "prompt": "いしゃ",
+      "readings": [
+        "いしゃ"
+      ],
+      "kind": "word",
+      "meaning": "bác sĩ",
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "w-ocha",
+      "prompt": "おちゃ",
+      "readings": [
+        "おちゃ"
+      ],
+      "kind": "word",
+      "meaning": "trà",
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "w-shukudai",
+      "prompt": "しゅくだい",
+      "readings": [
+        "しゅくだい"
+      ],
+      "kind": "word",
+      "meaning": "bài tập về nhà",
+      "tags": [
+        "dakuten",
+        "youon"
+      ]
+    },
+    {
+      "key": "w-shumi",
+      "prompt": "しゅみ",
+      "readings": [
+        "しゅみ"
+      ],
+      "kind": "word",
+      "meaning": "sở thích",
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "w-shokudou",
+      "prompt": "しょくどう",
+      "readings": [
+        "しょくどう"
+      ],
+      "kind": "word",
+      "meaning": "nhà ăn, căng tin",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-jisho",
+      "prompt": "じしょ",
+      "readings": [
+        "じしょ"
+      ],
+      "kind": "word",
+      "meaning": "từ điển",
+      "tags": [
+        "dakuten",
+        "youon"
+      ]
+    },
+    {
+      "key": "w-toshokan",
+      "prompt": "としょかん",
+      "readings": [
+        "としょかん"
+      ],
+      "kind": "word",
+      "meaning": "thư viện",
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "w-hyaku",
+      "prompt": "ひゃく",
+      "readings": [
+        "ひゃく"
+      ],
+      "kind": "word",
+      "meaning": "một trăm",
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "w-sanbyaku",
+      "prompt": "さんびゃく",
+      "readings": [
+        "さんびゃく"
+      ],
+      "kind": "word",
+      "meaning": "ba trăm",
+      "tags": [
+        "dakuten",
+        "youon"
+      ]
+    },
+    {
+      "key": "w-ryokou",
+      "prompt": "りょこう",
+      "readings": [
+        "りょこう"
+      ],
+      "kind": "word",
+      "meaning": "du lịch",
+      "tags": [
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-yakyuu",
+      "prompt": "やきゅう",
+      "readings": [
+        "やきゅう"
+      ],
+      "kind": "word",
+      "meaning": "bóng chày",
+      "tags": [
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-jugyou",
+      "prompt": "じゅぎょう",
+      "readings": [
+        "じゅぎょう"
+      ],
+      "kind": "word",
+      "meaning": "giờ học, tiết học",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kyuuri",
+      "prompt": "きゅうり",
+      "readings": [
+        "きゅうり"
+      ],
+      "kind": "word",
+      "meaning": "dưa chuột, dưa leo",
+      "tags": [
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-gyuunyuu",
+      "prompt": "ぎゅうにゅう",
+      "readings": [
+        "ぎゅうにゅう"
+      ],
+      "kind": "word",
+      "meaning": "sữa bò",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-shouyu",
+      "prompt": "しょうゆ",
+      "readings": [
+        "しょうゆ"
+      ],
+      "kind": "word",
+      "meaning": "nước tương, xì dầu",
+      "tags": [
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kingyo",
+      "prompt": "きんぎょ",
+      "readings": [
+        "きんぎょ"
+      ],
+      "kind": "word",
+      "meaning": "cá vàng",
+      "tags": [
+        "dakuten",
+        "youon"
+      ]
+    },
+    {
+      "key": "w-kanojo",
+      "prompt": "かのじょ",
+      "readings": [
+        "かのじょ"
+      ],
+      "kind": "word",
+      "meaning": "cô ấy; bạn gái",
+      "tags": [
+        "dakuten",
+        "youon"
+      ]
+    },
+    {
+      "key": "w-jouzu",
+      "prompt": "じょうず",
+      "readings": [
+        "じょうず"
+      ],
+      "kind": "word",
+      "meaning": "giỏi, khéo",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-myouji",
+      "prompt": "みょうじ",
+      "readings": [
+        "みょうじ"
+      ],
+      "kind": "word",
+      "meaning": "họ (trong họ tên)",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-ryuugakusei",
+      "prompt": "りゅうがくせい",
+      "readings": [
+        "りゅうがくせい"
+      ],
+      "kind": "word",
+      "meaning": "du học sinh",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-byouki",
+      "prompt": "びょうき",
+      "readings": [
+        "びょうき"
+      ],
+      "kind": "word",
+      "meaning": "bệnh, ốm",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-byouin",
+      "prompt": "びょういん",
+      "readings": [
+        "びょういん"
+      ],
+      "kind": "word",
+      "meaning": "bệnh viện",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-jama",
+      "prompt": "じゃま",
+      "readings": [
+        "じゃま"
+      ],
+      "kind": "word",
+      "meaning": "phiền, cản trở",
+      "tags": [
+        "dakuten",
+        "youon"
+      ]
+    },
+    {
+      "key": "w-choudo",
+      "prompt": "ちょうど",
+      "readings": [
+        "ちょうど"
+      ],
+      "kind": "word",
+      "meaning": "vừa đúng, vừa vặn",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-okyakusan",
+      "prompt": "おきゃくさん",
+      "readings": [
+        "おきゃくさん"
+      ],
+      "kind": "word",
+      "meaning": "khách, khách hàng",
+      "tags": [
+        "youon"
+      ]
+    },
+    {
+      "key": "w-benkyou",
+      "prompt": "べんきょう",
+      "readings": [
+        "べんきょう"
+      ],
+      "kind": "word",
+      "meaning": "học, việc học",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-ryouri",
+      "prompt": "りょうり",
+      "readings": [
+        "りょうり"
+      ],
+      "kind": "word",
+      "meaning": "món ăn; nấu ăn",
+      "tags": [
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-chuumon",
+      "prompt": "ちゅうもん",
+      "readings": [
+        "ちゅうもん"
+      ],
+      "kind": "word",
+      "meaning": "gọi món, đặt hàng",
+      "tags": [
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-daijoubu",
+      "prompt": "だいじょうぶ",
+      "readings": [
+        "だいじょうぶ"
+      ],
+      "kind": "word",
+      "meaning": "không sao, ổn",
+      "tags": [
+        "dakuten",
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-toukyou",
+      "prompt": "とうきょう",
+      "readings": [
+        "とうきょう"
+      ],
+      "kind": "word",
+      "meaning": "Tokyo (thủ đô Nhật Bản)",
+      "tags": [
+        "youon",
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kagi",
+      "prompt": "かぎ",
+      "readings": [
+        "かぎ"
+      ],
+      "kind": "word",
+      "meaning": "chìa khóa",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-kaban",
+      "prompt": "かばん",
+      "readings": [
+        "かばん"
+      ],
+      "kind": "word",
+      "meaning": "cặp, túi xách",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-kaze",
+      "prompt": "かぜ",
+      "readings": [
+        "かぜ"
+      ],
+      "kind": "word",
+      "meaning": "gió; bệnh cảm",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-gohan",
+      "prompt": "ごはん",
+      "readings": [
+        "ごはん"
+      ],
+      "kind": "word",
+      "meaning": "cơm; bữa ăn",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-hidari",
+      "prompt": "ひだり",
+      "readings": [
+        "ひだり"
+      ],
+      "kind": "word",
+      "meaning": "bên trái",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-migi",
+      "prompt": "みぎ",
+      "readings": [
+        "みぎ"
+      ],
+      "kind": "word",
+      "meaning": "bên phải",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-tomodachi",
+      "prompt": "ともだち",
+      "readings": [
+        "ともだち"
+      ],
+      "kind": "word",
+      "meaning": "bạn bè",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-denwa",
+      "prompt": "でんわ",
+      "readings": [
+        "でんわ"
+      ],
+      "kind": "word",
+      "meaning": "điện thoại",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-enpitsu",
+      "prompt": "えんぴつ",
+      "readings": [
+        "えんぴつ"
+      ],
+      "kind": "word",
+      "meaning": "bút chì",
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "w-sanpo",
+      "prompt": "さんぽ",
+      "readings": [
+        "さんぽ"
+      ],
+      "kind": "word",
+      "meaning": "đi dạo",
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "w-tenpura",
+      "prompt": "てんぷら",
+      "readings": [
+        "てんぷら"
+      ],
+      "kind": "word",
+      "meaning": "món tempura (đồ chiên tẩm bột)",
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "w-kazoku",
+      "prompt": "かぞく",
+      "readings": [
+        "かぞく"
+      ],
+      "kind": "word",
+      "meaning": "gia đình",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-mizu",
+      "prompt": "みず",
+      "readings": [
+        "みず"
+      ],
+      "kind": "word",
+      "meaning": "nước",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-karada",
+      "prompt": "からだ",
+      "readings": [
+        "からだ"
+      ],
+      "kind": "word",
+      "meaning": "cơ thể",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-mado",
+      "prompt": "まど",
+      "readings": [
+        "まど"
+      ],
+      "kind": "word",
+      "meaning": "cửa sổ",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-daigaku",
+      "prompt": "だいがく",
+      "readings": [
+        "だいがく"
+      ],
+      "kind": "word",
+      "meaning": "trường đại học",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-megane",
+      "prompt": "めがね",
+      "readings": [
+        "めがね"
+      ],
+      "kind": "word",
+      "meaning": "kính mắt",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-tamago",
+      "prompt": "たまご",
+      "readings": [
+        "たまご"
+      ],
+      "kind": "word",
+      "meaning": "trứng",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-gomi",
+      "prompt": "ごみ",
+      "readings": [
+        "ごみ"
+      ],
+      "kind": "word",
+      "meaning": "rác",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-deguchi",
+      "prompt": "でぐち",
+      "readings": [
+        "でぐち"
+      ],
+      "kind": "word",
+      "meaning": "lối ra",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-chizu",
+      "prompt": "ちず",
+      "readings": [
+        "ちず"
+      ],
+      "kind": "word",
+      "meaning": "bản đồ",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-zenbu",
+      "prompt": "ぜんぶ",
+      "readings": [
+        "ぜんぶ"
+      ],
+      "kind": "word",
+      "meaning": "tất cả, toàn bộ",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-tegami",
+      "prompt": "てがみ",
+      "readings": [
+        "てがみ"
+      ],
+      "kind": "word",
+      "meaning": "thư, lá thư",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-kanpai",
+      "prompt": "かんぱい",
+      "readings": [
+        "かんぱい"
+      ],
+      "kind": "word",
+      "meaning": "cạn ly, nâng ly",
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "w-shinpai",
+      "prompt": "しんぱい",
+      "readings": [
+        "しんぱい"
+      ],
+      "kind": "word",
+      "meaning": "lo lắng",
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "w-tanpopo",
+      "prompt": "たんぽぽ",
+      "readings": [
+        "たんぽぽ"
+      ],
+      "kind": "word",
+      "meaning": "hoa bồ công anh",
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "w-perapera",
+      "prompt": "ぺらぺら",
+      "readings": [
+        "ぺらぺら"
+      ],
+      "kind": "word",
+      "meaning": "(nói) trôi chảy, lưu loát",
+      "tags": [
+        "handakuten"
+      ]
+    },
+    {
+      "key": "w-zenzen",
+      "prompt": "ぜんぜん",
+      "readings": [
+        "ぜんぜん"
+      ],
+      "kind": "word",
+      "meaning": "hoàn toàn (không), chẳng... chút nào",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-jikan",
+      "prompt": "じかん",
+      "readings": [
+        "じかん"
+      ],
+      "kind": "word",
+      "meaning": "thời gian",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-genki",
+      "prompt": "げんき",
+      "readings": [
+        "げんき"
+      ],
+      "kind": "word",
+      "meaning": "khỏe mạnh",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-kudamono",
+      "prompt": "くだもの",
+      "readings": [
+        "くだもの"
+      ],
+      "kind": "word",
+      "meaning": "hoa quả, trái cây",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-shinbun",
+      "prompt": "しんぶん",
+      "readings": [
+        "しんぶん"
+      ],
+      "kind": "word",
+      "meaning": "tờ báo",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-shigoto",
+      "prompt": "しごと",
+      "readings": [
+        "しごと"
+      ],
+      "kind": "word",
+      "meaning": "công việc",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-abunai",
+      "prompt": "あぶない",
+      "readings": [
+        "あぶない"
+      ],
+      "kind": "word",
+      "meaning": "nguy hiểm",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-benri",
+      "prompt": "べんり",
+      "readings": [
+        "べんり"
+      ],
+      "kind": "word",
+      "meaning": "tiện lợi",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-obasan",
+      "prompt": "おばさん",
+      "readings": [
+        "おばさん"
+      ],
+      "kind": "word",
+      "meaning": "cô, dì, bác gái",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-ojisan",
+      "prompt": "おじさん",
+      "readings": [
+        "おじさん"
+      ],
+      "kind": "word",
+      "meaning": "chú, bác trai",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-tsuzuku",
+      "prompt": "つづく",
+      "readings": [
+        "つづく"
+      ],
+      "kind": "word",
+      "meaning": "tiếp tục, kéo dài",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-hanaji",
+      "prompt": "はなぢ",
+      "readings": [
+        "はなぢ"
+      ],
+      "kind": "word",
+      "meaning": "máu cam (chảy máu mũi)",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-kozutsumi",
+      "prompt": "こづつみ",
+      "readings": [
+        "こづつみ"
+      ],
+      "kind": "word",
+      "meaning": "bưu kiện",
+      "tags": [
+        "dakuten"
+      ]
+    },
+    {
+      "key": "w-pikapika",
+      "prompt": "ぴかぴか",
+      "readings": [
+        "ぴかぴか"
+      ],
+      "kind": "word",
+      "meaning": "sáng bóng, lấp lánh",
+      "tags": [
+        "handakuten"
+      ]
+    }
+  ]
+}

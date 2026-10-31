@@ -1,0 +1,36 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:8010:8010"
+    volumes:
+      - ./data:/data
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      JP_DATABASE_URL: sqlite:////data/app.db
+      JP_CONTENT_DIR: /app/backend/app/content/lessons
+      JP_FRONTEND_DIST: /app/frontend/dist
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8010/api/health', timeout=3)"
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+
+  tunnel:
+    image: cloudflare/cloudflared:2026.10.6
+    profiles: ["tunnel"]
+    command: ["tunnel", "--no-autoupdate", "--url", "http://app:8010"]
+    depends_on:
+      app:
+        condition: service_healthy
+    restart: unless-stopped

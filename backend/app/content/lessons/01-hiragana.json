@@ -1,0 +1,2073 @@
+{
+  "version": 1,
+  "slug": "hiragana",
+  "position": 1,
+  "title": "Hiragana",
+  "description": "46 chữ Hiragana cơ bản (bảng あいうえお) và hơn 150 từ thông dụng hằng ngày chỉ viết bằng 46 chữ này, chưa có dấu ゛ ゜ hay chữ nhỏ ゃ ゅ ょ っ. Nhìn chữ và gõ cách đọc bằng romaji.",
+  "items": [
+    {
+      "key": "c-a",
+      "prompt": "あ",
+      "readings": [
+        "あ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-i",
+      "prompt": "い",
+      "readings": [
+        "い"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-u",
+      "prompt": "う",
+      "readings": [
+        "う"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-e",
+      "prompt": "え",
+      "readings": [
+        "え"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-o",
+      "prompt": "お",
+      "readings": [
+        "お"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ka",
+      "prompt": "か",
+      "readings": [
+        "か"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ki",
+      "prompt": "き",
+      "readings": [
+        "き"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ku",
+      "prompt": "く",
+      "readings": [
+        "く"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ke",
+      "prompt": "け",
+      "readings": [
+        "け"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ko",
+      "prompt": "こ",
+      "readings": [
+        "こ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-sa",
+      "prompt": "さ",
+      "readings": [
+        "さ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-shi",
+      "prompt": "し",
+      "readings": [
+        "し"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-su",
+      "prompt": "す",
+      "readings": [
+        "す"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-se",
+      "prompt": "せ",
+      "readings": [
+        "せ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-so",
+      "prompt": "そ",
+      "readings": [
+        "そ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ta",
+      "prompt": "た",
+      "readings": [
+        "た"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-chi",
+      "prompt": "ち",
+      "readings": [
+        "ち"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-tsu",
+      "prompt": "つ",
+      "readings": [
+        "つ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-te",
+      "prompt": "て",
+      "readings": [
+        "て"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-to",
+      "prompt": "と",
+      "readings": [
+        "と"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-na",
+      "prompt": "な",
+      "readings": [
+        "な"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ni",
+      "prompt": "に",
+      "readings": [
+        "に"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-nu",
+      "prompt": "ぬ",
+      "readings": [
+        "ぬ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ne",
+      "prompt": "ね",
+      "readings": [
+        "ね"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-no",
+      "prompt": "の",
+      "readings": [
+        "の"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ha",
+      "prompt": "は",
+      "readings": [
+        "は"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-hi",
+      "prompt": "ひ",
+      "readings": [
+        "ひ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-fu",
+      "prompt": "ふ",
+      "readings": [
+        "ふ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-he",
+      "prompt": "へ",
+      "readings": [
+        "へ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ho",
+      "prompt": "ほ",
+      "readings": [
+        "ほ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ma",
+      "prompt": "ま",
+      "readings": [
+        "ま"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-mi",
+      "prompt": "み",
+      "readings": [
+        "み"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-mu",
+      "prompt": "む",
+      "readings": [
+        "む"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-me",
+      "prompt": "め",
+      "readings": [
+        "め"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-mo",
+      "prompt": "も",
+      "readings": [
+        "も"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ya",
+      "prompt": "や",
+      "readings": [
+        "や"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-yu",
+      "prompt": "ゆ",
+      "readings": [
+        "ゆ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-yo",
+      "prompt": "よ",
+      "readings": [
+        "よ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ra",
+      "prompt": "ら",
+      "readings": [
+        "ら"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ri",
+      "prompt": "り",
+      "readings": [
+        "り"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ru",
+      "prompt": "る",
+      "readings": [
+        "る"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-re",
+      "prompt": "れ",
+      "readings": [
+        "れ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-ro",
+      "prompt": "ろ",
+      "readings": [
+        "ろ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-wa",
+      "prompt": "わ",
+      "readings": [
+        "わ"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-wo",
+      "prompt": "を",
+      "readings": [
+        "を"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "c-n",
+      "prompt": "ん",
+      "readings": [
+        "ん"
+      ],
+      "kind": "char",
+      "meaning": null
+    },
+    {
+      "key": "w-watashi",
+      "prompt": "わたし",
+      "readings": [
+        "わたし"
+      ],
+      "kind": "word",
+      "meaning": "tôi"
+    },
+    {
+      "key": "w-anata",
+      "prompt": "あなた",
+      "readings": [
+        "あなた"
+      ],
+      "kind": "word",
+      "meaning": "bạn, anh, chị (ngôi thứ hai)"
+    },
+    {
+      "key": "w-hito",
+      "prompt": "ひと",
+      "readings": [
+        "ひと"
+      ],
+      "kind": "word",
+      "meaning": "người"
+    },
+    {
+      "key": "w-minna",
+      "prompt": "みんな",
+      "readings": [
+        "みんな"
+      ],
+      "kind": "word",
+      "meaning": "mọi người"
+    },
+    {
+      "key": "w-otoko",
+      "prompt": "おとこ",
+      "readings": [
+        "おとこ"
+      ],
+      "kind": "word",
+      "meaning": "đàn ông, nam giới"
+    },
+    {
+      "key": "w-onna",
+      "prompt": "おんな",
+      "readings": [
+        "おんな"
+      ],
+      "kind": "word",
+      "meaning": "phụ nữ, nữ giới"
+    },
+    {
+      "key": "w-sensei",
+      "prompt": "せんせい",
+      "readings": [
+        "せんせい"
+      ],
+      "kind": "word",
+      "meaning": "giáo viên, thầy cô",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-chichi",
+      "prompt": "ちち",
+      "readings": [
+        "ちち"
+      ],
+      "kind": "word",
+      "meaning": "bố (của mình)"
+    },
+    {
+      "key": "w-haha",
+      "prompt": "はは",
+      "readings": [
+        "はは"
+      ],
+      "kind": "word",
+      "meaning": "mẹ (của mình)"
+    },
+    {
+      "key": "w-ani",
+      "prompt": "あに",
+      "readings": [
+        "あに"
+      ],
+      "kind": "word",
+      "meaning": "anh trai (của mình)"
+    },
+    {
+      "key": "w-ane",
+      "prompt": "あね",
+      "readings": [
+        "あね"
+      ],
+      "kind": "word",
+      "meaning": "chị gái (của mình)"
+    },
+    {
+      "key": "w-musume",
+      "prompt": "むすめ",
+      "readings": [
+        "むすめ"
+      ],
+      "kind": "word",
+      "meaning": "con gái (của mình)"
+    },
+    {
+      "key": "w-otouto",
+      "prompt": "おとうと",
+      "readings": [
+        "おとうと"
+      ],
+      "kind": "word",
+      "meaning": "em trai",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-imouto",
+      "prompt": "いもうと",
+      "readings": [
+        "いもうと"
+      ],
+      "kind": "word",
+      "meaning": "em gái",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-atama",
+      "prompt": "あたま",
+      "readings": [
+        "あたま"
+      ],
+      "kind": "word",
+      "meaning": "đầu"
+    },
+    {
+      "key": "w-kao",
+      "prompt": "かお",
+      "readings": [
+        "かお"
+      ],
+      "kind": "word",
+      "meaning": "khuôn mặt"
+    },
+    {
+      "key": "w-mimi",
+      "prompt": "みみ",
+      "readings": [
+        "みみ"
+      ],
+      "kind": "word",
+      "meaning": "tai"
+    },
+    {
+      "key": "w-hana",
+      "prompt": "はな",
+      "readings": [
+        "はな"
+      ],
+      "kind": "word",
+      "meaning": "hoa; mũi"
+    },
+    {
+      "key": "w-kuchi",
+      "prompt": "くち",
+      "readings": [
+        "くち"
+      ],
+      "kind": "word",
+      "meaning": "miệng"
+    },
+    {
+      "key": "w-ashi",
+      "prompt": "あし",
+      "readings": [
+        "あし"
+      ],
+      "kind": "word",
+      "meaning": "chân"
+    },
+    {
+      "key": "w-onaka",
+      "prompt": "おなか",
+      "readings": [
+        "おなか"
+      ],
+      "kind": "word",
+      "meaning": "bụng"
+    },
+    {
+      "key": "w-senaka",
+      "prompt": "せなか",
+      "readings": [
+        "せなか"
+      ],
+      "kind": "word",
+      "meaning": "lưng"
+    },
+    {
+      "key": "w-inu",
+      "prompt": "いぬ",
+      "readings": [
+        "いぬ"
+      ],
+      "kind": "word",
+      "meaning": "con chó"
+    },
+    {
+      "key": "w-neko",
+      "prompt": "ねこ",
+      "readings": [
+        "ねこ"
+      ],
+      "kind": "word",
+      "meaning": "con mèo"
+    },
+    {
+      "key": "w-tori",
+      "prompt": "とり",
+      "readings": [
+        "とり"
+      ],
+      "kind": "word",
+      "meaning": "con chim"
+    },
+    {
+      "key": "w-ushi",
+      "prompt": "うし",
+      "readings": [
+        "うし"
+      ],
+      "kind": "word",
+      "meaning": "con bò"
+    },
+    {
+      "key": "w-uma",
+      "prompt": "うま",
+      "readings": [
+        "うま"
+      ],
+      "kind": "word",
+      "meaning": "con ngựa"
+    },
+    {
+      "key": "w-sakana",
+      "prompt": "さかな",
+      "readings": [
+        "さかな"
+      ],
+      "kind": "word",
+      "meaning": "con cá"
+    },
+    {
+      "key": "w-mushi",
+      "prompt": "むし",
+      "readings": [
+        "むし"
+      ],
+      "kind": "word",
+      "meaning": "côn trùng, sâu bọ"
+    },
+    {
+      "key": "w-tanuki",
+      "prompt": "たぬき",
+      "readings": [
+        "たぬき"
+      ],
+      "kind": "word",
+      "meaning": "con lửng chó (tanuki)"
+    },
+    {
+      "key": "w-kome",
+      "prompt": "こめ",
+      "readings": [
+        "こめ"
+      ],
+      "kind": "word",
+      "meaning": "gạo"
+    },
+    {
+      "key": "w-niku",
+      "prompt": "にく",
+      "readings": [
+        "にく"
+      ],
+      "kind": "word",
+      "meaning": "thịt"
+    },
+    {
+      "key": "w-yasai",
+      "prompt": "やさい",
+      "readings": [
+        "やさい"
+      ],
+      "kind": "word",
+      "meaning": "rau"
+    },
+    {
+      "key": "w-shio",
+      "prompt": "しお",
+      "readings": [
+        "しお"
+      ],
+      "kind": "word",
+      "meaning": "muối"
+    },
+    {
+      "key": "w-sushi",
+      "prompt": "すし",
+      "readings": [
+        "すし"
+      ],
+      "kind": "word",
+      "meaning": "sushi"
+    },
+    {
+      "key": "w-okashi",
+      "prompt": "おかし",
+      "readings": [
+        "おかし"
+      ],
+      "kind": "word",
+      "meaning": "bánh kẹo"
+    },
+    {
+      "key": "w-nomimono",
+      "prompt": "のみもの",
+      "readings": [
+        "のみもの"
+      ],
+      "kind": "word",
+      "meaning": "đồ uống"
+    },
+    {
+      "key": "w-mikan",
+      "prompt": "みかん",
+      "readings": [
+        "みかん"
+      ],
+      "kind": "word",
+      "meaning": "quả quýt"
+    },
+    {
+      "key": "w-hon",
+      "prompt": "ほん",
+      "readings": [
+        "ほん"
+      ],
+      "kind": "word",
+      "meaning": "quyển sách"
+    },
+    {
+      "key": "w-tsukue",
+      "prompt": "つくえ",
+      "readings": [
+        "つくえ"
+      ],
+      "kind": "word",
+      "meaning": "cái bàn (học, làm việc)"
+    },
+    {
+      "key": "w-isu",
+      "prompt": "いす",
+      "readings": [
+        "いす"
+      ],
+      "kind": "word",
+      "meaning": "cái ghế"
+    },
+    {
+      "key": "w-tokei",
+      "prompt": "とけい",
+      "readings": [
+        "とけい"
+      ],
+      "kind": "word",
+      "meaning": "đồng hồ",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-kasa",
+      "prompt": "かさ",
+      "readings": [
+        "かさ"
+      ],
+      "kind": "word",
+      "meaning": "cái ô (dù)"
+    },
+    {
+      "key": "w-saifu",
+      "prompt": "さいふ",
+      "readings": [
+        "さいふ"
+      ],
+      "kind": "word",
+      "meaning": "cái ví"
+    },
+    {
+      "key": "w-hasami",
+      "prompt": "はさみ",
+      "readings": [
+        "はさみ"
+      ],
+      "kind": "word",
+      "meaning": "cái kéo"
+    },
+    {
+      "key": "w-hashi",
+      "prompt": "はし",
+      "readings": [
+        "はし"
+      ],
+      "kind": "word",
+      "meaning": "đôi đũa; cây cầu"
+    },
+    {
+      "key": "w-fuku",
+      "prompt": "ふく",
+      "readings": [
+        "ふく"
+      ],
+      "kind": "word",
+      "meaning": "quần áo"
+    },
+    {
+      "key": "w-kusuri",
+      "prompt": "くすり",
+      "readings": [
+        "くすり"
+      ],
+      "kind": "word",
+      "meaning": "thuốc"
+    },
+    {
+      "key": "w-okane",
+      "prompt": "おかね",
+      "readings": [
+        "おかね"
+      ],
+      "kind": "word",
+      "meaning": "tiền"
+    },
+    {
+      "key": "w-keitai",
+      "prompt": "けいたい",
+      "readings": [
+        "けいたい"
+      ],
+      "kind": "word",
+      "meaning": "điện thoại di động",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-ie",
+      "prompt": "いえ",
+      "readings": [
+        "いえ"
+      ],
+      "kind": "word",
+      "meaning": "ngôi nhà"
+    },
+    {
+      "key": "w-ofuro",
+      "prompt": "おふろ",
+      "readings": [
+        "おふろ"
+      ],
+      "kind": "word",
+      "meaning": "bồn tắm; việc tắm"
+    },
+    {
+      "key": "w-uchi",
+      "prompt": "うち",
+      "readings": [
+        "うち"
+      ],
+      "kind": "word",
+      "meaning": "nhà (của mình)"
+    },
+    {
+      "key": "w-heya",
+      "prompt": "へや",
+      "readings": [
+        "へや"
+      ],
+      "kind": "word",
+      "meaning": "căn phòng"
+    },
+    {
+      "key": "w-niwa",
+      "prompt": "にわ",
+      "readings": [
+        "にわ"
+      ],
+      "kind": "word",
+      "meaning": "khu vườn"
+    },
+    {
+      "key": "w-eki",
+      "prompt": "えき",
+      "readings": [
+        "えき"
+      ],
+      "kind": "word",
+      "meaning": "nhà ga"
+    },
+    {
+      "key": "w-mise",
+      "prompt": "みせ",
+      "readings": [
+        "みせ"
+      ],
+      "kind": "word",
+      "meaning": "cửa hàng"
+    },
+    {
+      "key": "w-machi",
+      "prompt": "まち",
+      "readings": [
+        "まち"
+      ],
+      "kind": "word",
+      "meaning": "thị trấn, khu phố"
+    },
+    {
+      "key": "w-kuni",
+      "prompt": "くに",
+      "readings": [
+        "くに"
+      ],
+      "kind": "word",
+      "meaning": "đất nước"
+    },
+    {
+      "key": "w-nihon",
+      "prompt": "にほん",
+      "readings": [
+        "にほん"
+      ],
+      "kind": "word",
+      "meaning": "Nhật Bản"
+    },
+    {
+      "key": "w-sekai",
+      "prompt": "せかい",
+      "readings": [
+        "せかい"
+      ],
+      "kind": "word",
+      "meaning": "thế giới"
+    },
+    {
+      "key": "w-tatemono",
+      "prompt": "たてもの",
+      "readings": [
+        "たてもの"
+      ],
+      "kind": "word",
+      "meaning": "tòa nhà"
+    },
+    {
+      "key": "w-chikatetsu",
+      "prompt": "ちかてつ",
+      "readings": [
+        "ちかてつ"
+      ],
+      "kind": "word",
+      "meaning": "tàu điện ngầm"
+    },
+    {
+      "key": "w-hikouki",
+      "prompt": "ひこうき",
+      "readings": [
+        "ひこうき"
+      ],
+      "kind": "word",
+      "meaning": "máy bay",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-fune",
+      "prompt": "ふね",
+      "readings": [
+        "ふね"
+      ],
+      "kind": "word",
+      "meaning": "con thuyền, tàu thủy"
+    },
+    {
+      "key": "w-yama",
+      "prompt": "やま",
+      "readings": [
+        "やま"
+      ],
+      "kind": "word",
+      "meaning": "núi"
+    },
+    {
+      "key": "w-kawa",
+      "prompt": "かわ",
+      "readings": [
+        "かわ"
+      ],
+      "kind": "word",
+      "meaning": "con sông"
+    },
+    {
+      "key": "w-umi",
+      "prompt": "うみ",
+      "readings": [
+        "うみ"
+      ],
+      "kind": "word",
+      "meaning": "biển"
+    },
+    {
+      "key": "w-ike",
+      "prompt": "いけ",
+      "readings": [
+        "いけ"
+      ],
+      "kind": "word",
+      "meaning": "cái ao"
+    },
+    {
+      "key": "w-mori",
+      "prompt": "もり",
+      "readings": [
+        "もり"
+      ],
+      "kind": "word",
+      "meaning": "rừng"
+    },
+    {
+      "key": "w-sora",
+      "prompt": "そら",
+      "readings": [
+        "そら"
+      ],
+      "kind": "word",
+      "meaning": "bầu trời"
+    },
+    {
+      "key": "w-kumo",
+      "prompt": "くも",
+      "readings": [
+        "くも"
+      ],
+      "kind": "word",
+      "meaning": "mây; con nhện"
+    },
+    {
+      "key": "w-ame",
+      "prompt": "あめ",
+      "readings": [
+        "あめ"
+      ],
+      "kind": "word",
+      "meaning": "mưa; kẹo"
+    },
+    {
+      "key": "w-yuki",
+      "prompt": "ゆき",
+      "readings": [
+        "ゆき"
+      ],
+      "kind": "word",
+      "meaning": "tuyết"
+    },
+    {
+      "key": "w-tenki",
+      "prompt": "てんき",
+      "readings": [
+        "てんき"
+      ],
+      "kind": "word",
+      "meaning": "thời tiết"
+    },
+    {
+      "key": "w-hoshi",
+      "prompt": "ほし",
+      "readings": [
+        "ほし"
+      ],
+      "kind": "word",
+      "meaning": "ngôi sao"
+    },
+    {
+      "key": "w-tsuki",
+      "prompt": "つき",
+      "readings": [
+        "つき"
+      ],
+      "kind": "word",
+      "meaning": "mặt trăng; tháng"
+    },
+    {
+      "key": "w-sakura",
+      "prompt": "さくら",
+      "readings": [
+        "さくら"
+      ],
+      "kind": "word",
+      "meaning": "hoa anh đào"
+    },
+    {
+      "key": "w-asa",
+      "prompt": "あさ",
+      "readings": [
+        "あさ"
+      ],
+      "kind": "word",
+      "meaning": "buổi sáng"
+    },
+    {
+      "key": "w-hiru",
+      "prompt": "ひる",
+      "readings": [
+        "ひる"
+      ],
+      "kind": "word",
+      "meaning": "buổi trưa; ban ngày"
+    },
+    {
+      "key": "w-yoru",
+      "prompt": "よる",
+      "readings": [
+        "よる"
+      ],
+      "kind": "word",
+      "meaning": "buổi tối, ban đêm"
+    },
+    {
+      "key": "w-haru",
+      "prompt": "はる",
+      "readings": [
+        "はる"
+      ],
+      "kind": "word",
+      "meaning": "mùa xuân"
+    },
+    {
+      "key": "w-natsu",
+      "prompt": "なつ",
+      "readings": [
+        "なつ"
+      ],
+      "kind": "word",
+      "meaning": "mùa hè"
+    },
+    {
+      "key": "w-aki",
+      "prompt": "あき",
+      "readings": [
+        "あき"
+      ],
+      "kind": "word",
+      "meaning": "mùa thu"
+    },
+    {
+      "key": "w-fuyu",
+      "prompt": "ふゆ",
+      "readings": [
+        "ふゆ"
+      ],
+      "kind": "word",
+      "meaning": "mùa đông"
+    },
+    {
+      "key": "w-ima",
+      "prompt": "いま",
+      "readings": [
+        "いま"
+      ],
+      "kind": "word",
+      "meaning": "bây giờ"
+    },
+    {
+      "key": "w-kinou",
+      "prompt": "きのう",
+      "readings": [
+        "きのう"
+      ],
+      "kind": "word",
+      "meaning": "hôm qua",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-ashita",
+      "prompt": "あした",
+      "readings": [
+        "あした"
+      ],
+      "kind": "word",
+      "meaning": "ngày mai"
+    },
+    {
+      "key": "w-kotoshi",
+      "prompt": "ことし",
+      "readings": [
+        "ことし"
+      ],
+      "kind": "word",
+      "meaning": "năm nay"
+    },
+    {
+      "key": "w-mainichi",
+      "prompt": "まいにち",
+      "readings": [
+        "まいにち"
+      ],
+      "kind": "word",
+      "meaning": "mỗi ngày, hằng ngày"
+    },
+    {
+      "key": "w-yasumi",
+      "prompt": "やすみ",
+      "readings": [
+        "やすみ"
+      ],
+      "kind": "word",
+      "meaning": "ngày nghỉ, kỳ nghỉ"
+    },
+    {
+      "key": "w-ue",
+      "prompt": "うえ",
+      "readings": [
+        "うえ"
+      ],
+      "kind": "word",
+      "meaning": "phía trên"
+    },
+    {
+      "key": "w-shita",
+      "prompt": "した",
+      "readings": [
+        "した"
+      ],
+      "kind": "word",
+      "meaning": "phía dưới"
+    },
+    {
+      "key": "w-naka",
+      "prompt": "なか",
+      "readings": [
+        "なか"
+      ],
+      "kind": "word",
+      "meaning": "bên trong"
+    },
+    {
+      "key": "w-soto",
+      "prompt": "そと",
+      "readings": [
+        "そと"
+      ],
+      "kind": "word",
+      "meaning": "bên ngoài"
+    },
+    {
+      "key": "w-mae",
+      "prompt": "まえ",
+      "readings": [
+        "まえ"
+      ],
+      "kind": "word",
+      "meaning": "phía trước"
+    },
+    {
+      "key": "w-ushiro",
+      "prompt": "うしろ",
+      "readings": [
+        "うしろ"
+      ],
+      "kind": "word",
+      "meaning": "phía sau"
+    },
+    {
+      "key": "w-tonari",
+      "prompt": "となり",
+      "readings": [
+        "となり"
+      ],
+      "kind": "word",
+      "meaning": "bên cạnh (sát bên)"
+    },
+    {
+      "key": "w-yoko",
+      "prompt": "よこ",
+      "readings": [
+        "よこ"
+      ],
+      "kind": "word",
+      "meaning": "bên cạnh; chiều ngang"
+    },
+    {
+      "key": "w-kore",
+      "prompt": "これ",
+      "readings": [
+        "これ"
+      ],
+      "kind": "word",
+      "meaning": "cái này"
+    },
+    {
+      "key": "w-sore",
+      "prompt": "それ",
+      "readings": [
+        "それ"
+      ],
+      "kind": "word",
+      "meaning": "cái đó"
+    },
+    {
+      "key": "w-are",
+      "prompt": "あれ",
+      "readings": [
+        "あれ"
+      ],
+      "kind": "word",
+      "meaning": "cái kia"
+    },
+    {
+      "key": "w-koko",
+      "prompt": "ここ",
+      "readings": [
+        "ここ"
+      ],
+      "kind": "word",
+      "meaning": "chỗ này"
+    },
+    {
+      "key": "w-soko",
+      "prompt": "そこ",
+      "readings": [
+        "そこ"
+      ],
+      "kind": "word",
+      "meaning": "chỗ đó"
+    },
+    {
+      "key": "w-asoko",
+      "prompt": "あそこ",
+      "readings": [
+        "あそこ"
+      ],
+      "kind": "word",
+      "meaning": "chỗ kia"
+    },
+    {
+      "key": "w-nani",
+      "prompt": "なに",
+      "readings": [
+        "なに"
+      ],
+      "kind": "word",
+      "meaning": "cái gì"
+    },
+    {
+      "key": "w-itsu",
+      "prompt": "いつ",
+      "readings": [
+        "いつ"
+      ],
+      "kind": "word",
+      "meaning": "khi nào"
+    },
+    {
+      "key": "w-ikura",
+      "prompt": "いくら",
+      "readings": [
+        "いくら"
+      ],
+      "kind": "word",
+      "meaning": "bao nhiêu (tiền)"
+    },
+    {
+      "key": "w-namae",
+      "prompt": "なまえ",
+      "readings": [
+        "なまえ"
+      ],
+      "kind": "word",
+      "meaning": "tên"
+    },
+    {
+      "key": "w-iro",
+      "prompt": "いろ",
+      "readings": [
+        "いろ"
+      ],
+      "kind": "word",
+      "meaning": "màu sắc"
+    },
+    {
+      "key": "w-uta",
+      "prompt": "うた",
+      "readings": [
+        "うた"
+      ],
+      "kind": "word",
+      "meaning": "bài hát"
+    },
+    {
+      "key": "w-yume",
+      "prompt": "ゆめ",
+      "readings": [
+        "ゆめ"
+      ],
+      "kind": "word",
+      "meaning": "giấc mơ"
+    },
+    {
+      "key": "w-kokoro",
+      "prompt": "こころ",
+      "readings": [
+        "こころ"
+      ],
+      "kind": "word",
+      "meaning": "trái tim, tấm lòng"
+    },
+    {
+      "key": "w-kotae",
+      "prompt": "こたえ",
+      "readings": [
+        "こたえ"
+      ],
+      "kind": "word",
+      "meaning": "câu trả lời"
+    },
+    {
+      "key": "w-yotei",
+      "prompt": "よてい",
+      "readings": [
+        "よてい"
+      ],
+      "kind": "word",
+      "meaning": "dự định, kế hoạch",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-heiwa",
+      "prompt": "へいわ",
+      "readings": [
+        "へいわ"
+      ],
+      "kind": "word",
+      "meaning": "hòa bình",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-ookii",
+      "prompt": "おおきい",
+      "readings": [
+        "おおきい"
+      ],
+      "kind": "word",
+      "meaning": "to, lớn",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-chiisai",
+      "prompt": "ちいさい",
+      "readings": [
+        "ちいさい"
+      ],
+      "kind": "word",
+      "meaning": "nhỏ, bé",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-takai",
+      "prompt": "たかい",
+      "readings": [
+        "たかい"
+      ],
+      "kind": "word",
+      "meaning": "cao; đắt"
+    },
+    {
+      "key": "w-yasui",
+      "prompt": "やすい",
+      "readings": [
+        "やすい"
+      ],
+      "kind": "word",
+      "meaning": "rẻ"
+    },
+    {
+      "key": "w-hikui",
+      "prompt": "ひくい",
+      "readings": [
+        "ひくい"
+      ],
+      "kind": "word",
+      "meaning": "thấp"
+    },
+    {
+      "key": "w-furui",
+      "prompt": "ふるい",
+      "readings": [
+        "ふるい"
+      ],
+      "kind": "word",
+      "meaning": "cũ"
+    },
+    {
+      "key": "w-nurui",
+      "prompt": "ぬるい",
+      "readings": [
+        "ぬるい"
+      ],
+      "kind": "word",
+      "meaning": "âm ấm, nguội (không đủ nóng hay lạnh)"
+    },
+    {
+      "key": "w-atarashii",
+      "prompt": "あたらしい",
+      "readings": [
+        "あたらしい"
+      ],
+      "kind": "word",
+      "meaning": "mới",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-atsui",
+      "prompt": "あつい",
+      "readings": [
+        "あつい"
+      ],
+      "kind": "word",
+      "meaning": "nóng"
+    },
+    {
+      "key": "w-samui",
+      "prompt": "さむい",
+      "readings": [
+        "さむい"
+      ],
+      "kind": "word",
+      "meaning": "lạnh (thời tiết)"
+    },
+    {
+      "key": "w-tsumetai",
+      "prompt": "つめたい",
+      "readings": [
+        "つめたい"
+      ],
+      "kind": "word",
+      "meaning": "lạnh (khi chạm vào)"
+    },
+    {
+      "key": "w-tooi",
+      "prompt": "とおい",
+      "readings": [
+        "とおい"
+      ],
+      "kind": "word",
+      "meaning": "xa",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-hayai",
+      "prompt": "はやい",
+      "readings": [
+        "はやい"
+      ],
+      "kind": "word",
+      "meaning": "nhanh; sớm"
+    },
+    {
+      "key": "w-ii",
+      "prompt": "いい",
+      "readings": [
+        "いい"
+      ],
+      "kind": "word",
+      "meaning": "tốt",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-warui",
+      "prompt": "わるい",
+      "readings": [
+        "わるい"
+      ],
+      "kind": "word",
+      "meaning": "xấu, tồi"
+    },
+    {
+      "key": "w-oishii",
+      "prompt": "おいしい",
+      "readings": [
+        "おいしい"
+      ],
+      "kind": "word",
+      "meaning": "ngon",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-omoshiroi",
+      "prompt": "おもしろい",
+      "readings": [
+        "おもしろい"
+      ],
+      "kind": "word",
+      "meaning": "thú vị, hay"
+    },
+    {
+      "key": "w-tanoshii",
+      "prompt": "たのしい",
+      "readings": [
+        "たのしい"
+      ],
+      "kind": "word",
+      "meaning": "vui",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-hoshii",
+      "prompt": "ほしい",
+      "readings": [
+        "ほしい"
+      ],
+      "kind": "word",
+      "meaning": "muốn có",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-akai",
+      "prompt": "あかい",
+      "readings": [
+        "あかい"
+      ],
+      "kind": "word",
+      "meaning": "đỏ"
+    },
+    {
+      "key": "w-aoi",
+      "prompt": "あおい",
+      "readings": [
+        "あおい"
+      ],
+      "kind": "word",
+      "meaning": "xanh (dương)"
+    },
+    {
+      "key": "w-shiroi",
+      "prompt": "しろい",
+      "readings": [
+        "しろい"
+      ],
+      "kind": "word",
+      "meaning": "trắng"
+    },
+    {
+      "key": "w-kuroi",
+      "prompt": "くろい",
+      "readings": [
+        "くろい"
+      ],
+      "kind": "word",
+      "meaning": "đen"
+    },
+    {
+      "key": "w-kirei",
+      "prompt": "きれい",
+      "readings": [
+        "きれい"
+      ],
+      "kind": "word",
+      "meaning": "đẹp; sạch",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-suki",
+      "prompt": "すき",
+      "readings": [
+        "すき"
+      ],
+      "kind": "word",
+      "meaning": "thích"
+    },
+    {
+      "key": "w-heta",
+      "prompt": "へた",
+      "readings": [
+        "へた"
+      ],
+      "kind": "word",
+      "meaning": "kém, dở"
+    },
+    {
+      "key": "w-hen",
+      "prompt": "へん",
+      "readings": [
+        "へん"
+      ],
+      "kind": "word",
+      "meaning": "kỳ lạ"
+    },
+    {
+      "key": "w-hima",
+      "prompt": "ひま",
+      "readings": [
+        "ひま"
+      ],
+      "kind": "word",
+      "meaning": "rảnh rỗi"
+    },
+    {
+      "key": "w-yuumei",
+      "prompt": "ゆうめい",
+      "readings": [
+        "ゆうめい"
+      ],
+      "kind": "word",
+      "meaning": "nổi tiếng",
+      "tags": [
+        "chouon"
+      ]
+    },
+    {
+      "key": "w-iku",
+      "prompt": "いく",
+      "readings": [
+        "いく"
+      ],
+      "kind": "word",
+      "meaning": "đi"
+    },
+    {
+      "key": "w-kuru",
+      "prompt": "くる",
+      "readings": [
+        "くる"
+      ],
+      "kind": "word",
+      "meaning": "đến"
+    },
+    {
+      "key": "w-kaeru",
+      "prompt": "かえる",
+      "readings": [
+        "かえる"
+      ],
+      "kind": "word",
+      "meaning": "trở về; con ếch"
+    },
+    {
+      "key": "w-aru",
+      "prompt": "ある",
+      "readings": [
+        "ある"
+      ],
+      "kind": "word",
+      "meaning": "có (đồ vật)"
+    },
+    {
+      "key": "w-iru",
+      "prompt": "いる",
+      "readings": [
+        "いる"
+      ],
+      "kind": "word",
+      "meaning": "có, ở (người, động vật)"
+    },
+    {
+      "key": "w-miru",
+      "prompt": "みる",
+      "readings": [
+        "みる"
+      ],
+      "kind": "word",
+      "meaning": "xem, nhìn"
+    },
+    {
+      "key": "w-kiku",
+      "prompt": "きく",
+      "readings": [
+        "きく"
+      ],
+      "kind": "word",
+      "meaning": "nghe; hỏi"
+    },
+    {
+      "key": "w-yomu",
+      "prompt": "よむ",
+      "readings": [
+        "よむ"
+      ],
+      "kind": "word",
+      "meaning": "đọc"
+    },
+    {
+      "key": "w-kaku",
+      "prompt": "かく",
+      "readings": [
+        "かく"
+      ],
+      "kind": "word",
+      "meaning": "viết; vẽ"
+    },
+    {
+      "key": "w-hanasu",
+      "prompt": "はなす",
+      "readings": [
+        "はなす"
+      ],
+      "kind": "word",
+      "meaning": "nói chuyện"
+    },
+    {
+      "key": "w-nomu",
+      "prompt": "のむ",
+      "readings": [
+        "のむ"
+      ],
+      "kind": "word",
+      "meaning": "uống"
+    },
+    {
+      "key": "w-kau",
+      "prompt": "かう",
+      "readings": [
+        "かう"
+      ],
+      "kind": "word",
+      "meaning": "mua"
+    },
+    {
+      "key": "w-matsu",
+      "prompt": "まつ",
+      "readings": [
+        "まつ"
+      ],
+      "kind": "word",
+      "meaning": "chờ, đợi"
+    },
+    {
+      "key": "w-aruku",
+      "prompt": "あるく",
+      "readings": [
+        "あるく"
+      ],
+      "kind": "word",
+      "meaning": "đi bộ"
+    },
+    {
+      "key": "w-hashiru",
+      "prompt": "はしる",
+      "readings": [
+        "はしる"
+      ],
+      "kind": "word",
+      "meaning": "chạy"
+    },
+    {
+      "key": "w-noru",
+      "prompt": "のる",
+      "readings": [
+        "のる"
+      ],
+      "kind": "word",
+      "meaning": "lên, đi (xe, tàu)"
+    },
+    {
+      "key": "w-okiru",
+      "prompt": "おきる",
+      "readings": [
+        "おきる"
+      ],
+      "kind": "word",
+      "meaning": "thức dậy"
+    },
+    {
+      "key": "w-neru",
+      "prompt": "ねる",
+      "readings": [
+        "ねる"
+      ],
+      "kind": "word",
+      "meaning": "ngủ"
+    },
+    {
+      "key": "w-hataraku",
+      "prompt": "はたらく",
+      "readings": [
+        "はたらく"
+      ],
+      "kind": "word",
+      "meaning": "làm việc"
+    },
+    {
+      "key": "w-akeru",
+      "prompt": "あける",
+      "readings": [
+        "あける"
+      ],
+      "kind": "word",
+      "meaning": "mở"
+    },
+    {
+      "key": "w-shimeru",
+      "prompt": "しめる",
+      "readings": [
+        "しめる"
+      ],
+      "kind": "word",
+      "meaning": "đóng"
+    },
+    {
+      "key": "w-wakaru",
+      "prompt": "わかる",
+      "readings": [
+        "わかる"
+      ],
+      "kind": "word",
+      "meaning": "hiểu"
+    },
+    {
+      "key": "w-oshieru",
+      "prompt": "おしえる",
+      "readings": [
+        "おしえる"
+      ],
+      "kind": "word",
+      "meaning": "dạy; chỉ cho"
+    },
+    {
+      "key": "w-nureru",
+      "prompt": "ぬれる",
+      "readings": [
+        "ぬれる"
+      ],
+      "kind": "word",
+      "meaning": "bị ướt"
+    },
+    {
+      "key": "w-kesu",
+      "prompt": "けす",
+      "readings": [
+        "けす"
+      ],
+      "kind": "word",
+      "meaning": "tắt; xóa"
+    },
+    {
+      "key": "w-totemo",
+      "prompt": "とても",
+      "readings": [
+        "とても"
+      ],
+      "kind": "word",
+      "meaning": "rất"
+    },
+    {
+      "key": "w-sukoshi",
+      "prompt": "すこし",
+      "readings": [
+        "すこし"
+      ],
+      "kind": "word",
+      "meaning": "một chút"
+    },
+    {
+      "key": "w-yoku",
+      "prompt": "よく",
+      "readings": [
+        "よく"
+      ],
+      "kind": "word",
+      "meaning": "thường; giỏi, kỹ"
+    },
+    {
+      "key": "w-te-wo-arau",
+      "prompt": "てをあらう",
+      "readings": [
+        "てをあらう"
+      ],
+      "kind": "word",
+      "meaning": "rửa tay",
+      "tags": [
+        "particle"
+      ]
+    },
+    {
+      "key": "w-hon-wo-yomu",
+      "prompt": "ほんをよむ",
+      "readings": [
+        "ほんをよむ"
+      ],
+      "kind": "word",
+      "meaning": "đọc sách",
+      "tags": [
+        "particle"
+      ]
+    },
+    {
+      "key": "w-e-wo-kaku",
+      "prompt": "えをかく",
+      "readings": [
+        "えをかく"
+      ],
+      "kind": "word",
+      "meaning": "vẽ tranh",
+      "tags": [
+        "particle"
+      ]
+    }
+  ]
+}
