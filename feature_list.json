@@ -1,0 +1,182 @@
+{
+  "updated": "2026-11-01",
+  "statuses": {
+    "implemented": "Committed, covered by the listed tests, all checks pass.",
+    "in_progress": "Code exists (often uncommitted) but is not finished, committed or verified.",
+    "pending": "Agreed or known work that has not started.",
+    "decision_needed": "Blocked on a user decision; do not start without it."
+  },
+  "features": [
+    {
+      "id": "lesson-content",
+      "title": "Six lesson JSON files synced to the database by stable key",
+      "area": "backend",
+      "status": "implemented",
+      "files": ["backend/app/content/lessons/", "backend/app/content/validation.py", "backend/app/services/content_sync.py"],
+      "tests": ["backend/tests/test_content.py", "backend/scripts/validate_content.py"],
+      "notes": "hiragana 222, hiragana-extended 207, katakana 204, katakana-extended 209, greetings 81, numbers 100."
+    },
+    {
+      "id": "anonymous-learner",
+      "title": "Anonymous learner identity via jp_learner cookie",
+      "area": "fullstack",
+      "status": "implemented",
+      "files": ["backend/app/api/learner.py", "backend/app/api/deps.py", "frontend/src/app/Router.tsx"],
+      "tests": ["backend/tests/test_api.py::test_anonymous_cookie_is_stable_and_isolates_progress", "backend/tests/test_api.py::test_forged_learner_cookie_gets_a_fresh_identity"],
+      "notes": "Learner registration/login is disabled; /login and /register redirect to /."
+    },
+    {
+      "id": "romaji-practice",
+      "title": "20-question romaji practice with weakness tracking and 5 focus items",
+      "area": "fullstack",
+      "status": "implemented",
+      "files": ["backend/app/api/sessions.py", "backend/app/services/selection.py", "backend/app/services/progress.py", "backend/app/services/romaji.py", "frontend/src/pages/PracticePage.tsx"],
+      "tests": ["backend/tests/test_services.py", "backend/tests/test_romaji.py", "backend/tests/test_api.py::test_lessons_session_answer_and_double_submit", "frontend/src/pages/PracticePage.test.tsx"],
+      "notes": "Correct answers auto-advance after 700 ms; wrong answers wait for Enter."
+    },
+    {
+      "id": "history-summary",
+      "title": "Session summary and history pages",
+      "area": "fullstack",
+      "status": "implemented",
+      "files": ["frontend/src/pages/SummaryPage.tsx", "frontend/src/pages/HistoryPage.tsx", "backend/app/api/sessions.py"],
+      "tests": ["backend/tests/test_api.py::test_completed_session_counts"],
+      "notes": "No frontend tests for SummaryPage, HistoryPage or DashboardPage."
+    },
+    {
+      "id": "reset-lesson-progress",
+      "title": "Reset one lesson's progress",
+      "area": "fullstack",
+      "status": "implemented",
+      "files": ["backend/app/api/lessons.py", "frontend/src/api/client.ts"],
+      "tests": [],
+      "notes": "DELETE /api/lessons/{slug}/progress has no backend test."
+    },
+    {
+      "id": "admin-stats",
+      "title": "Admin login and aggregate statistics",
+      "area": "fullstack",
+      "status": "implemented",
+      "files": ["backend/app/api/admin.py", "backend/scripts/set_admin_password.py", "frontend/src/pages/AdminPage.tsx"],
+      "tests": ["backend/tests/test_api.py::test_admin_overview_is_aggregate_only", "backend/tests/test_api.py::test_admin_login_rate_limit", "backend/tests/test_admin_password_script.py", "frontend/src/pages/AdminPage.test.tsx"],
+      "notes": "GET /api/admin/overview also deletes visits older than 90 days. Stats do not include chapter tests yet (see admin-chapter-test-stats)."
+    },
+    {
+      "id": "chapter1-listening-test",
+      "title": "Chapter 1 listening test: 30 questions in 5 parts with VOICEVOX audio",
+      "area": "fullstack",
+      "status": "implemented",
+      "files": ["backend/app/api/chapter_tests.py", "backend/app/services/chapter_test.py", "backend/app/services/listening.py", "backend/app/services/audio.py", "frontend/src/pages/ChapterTestPage.tsx", "frontend/src/pages/ChapterTestResultPage.tsx", "frontend/public/assets/audio/"],
+      "tests": ["backend/tests/test_chapter_test.py", "frontend/src/pages/ChapterTestPage.test.tsx"],
+      "notes": "743 clips for 743 prompts. Keep the VOICEVOX credit visible."
+    },
+    {
+      "id": "chapter-test-sample-question",
+      "title": "Unscored sample question before the chapter test",
+      "area": "fullstack",
+      "status": "in_progress",
+      "files": ["backend/app/api/schemas.py", "backend/app/api/chapter_tests.py", "frontend/src/api/types.ts", "frontend/src/pages/ChapterTestPage.tsx", "docs/api.md"],
+      "tests": ["backend/tests/test_chapter_test.py", "frontend/src/pages/ChapterTestPage.test.tsx"],
+      "notes": "Uncommitted in the working tree as of 2026-11-01; tests pass. Adds ChapterTestExampleOut / test.example."
+    },
+    {
+      "id": "theme-mode",
+      "title": "Light/dark/system theme toggle",
+      "area": "frontend",
+      "status": "in_progress",
+      "files": ["frontend/src/components/ThemeMode.tsx", "frontend/src/main.tsx", "frontend/src/components/AppLayout.tsx", "frontend/src/pages/AdminPage.tsx", "frontend/src/styles.css"],
+      "tests": ["frontend/src/components/ThemeMode.test.tsx"],
+      "notes": "ThemeMode.tsx and its test are untracked as of 2026-11-01."
+    },
+    {
+      "id": "lesson-kana-table",
+      "title": "Kana reference table on the lesson page",
+      "area": "frontend",
+      "status": "in_progress",
+      "files": ["frontend/src/pages/LessonPage.tsx", "frontend/src/styles.css"],
+      "tests": ["frontend/src/pages/LessonPage.test.tsx"],
+      "notes": "Uncommitted; LessonPage.test.tsx is untracked. An earlier TS2352 tuple-cast error is fixed in the working tree."
+    },
+    {
+      "id": "track-build-configs",
+      "title": "Commit frontend build configs (tsconfig*, vite.config.ts, eslint.config.js)",
+      "area": "tooling",
+      "status": "pending",
+      "files": ["frontend/tsconfig.json", "frontend/tsconfig.app.json", "frontend/tsconfig.node.json", "frontend/vite.config.ts", "frontend/eslint.config.js"],
+      "tests": ["scripts/check.sh --build"],
+      "notes": "Untracked, so a fresh clone and the Docker build fail at npm run build. Highest-priority repo fix."
+    },
+    {
+      "id": "unused-cjk-font",
+      "title": "Decide on frontend/public/assets/noto-sans-cjk.ttc",
+      "area": "frontend",
+      "status": "decision_needed",
+      "files": ["frontend/public/assets/noto-sans-cjk.ttc"],
+      "tests": [],
+      "notes": "18.6 MB, untracked, referenced nowhere, but copied into dist by the build. Use it (subset to woff2) or delete it."
+    },
+    {
+      "id": "spaced-repetition",
+      "title": "Time-based review scheduling (due dates)",
+      "area": "fullstack",
+      "status": "pending",
+      "files": ["backend/app/services/selection.py", "backend/app/services/progress.py", "backend/app/models.py"],
+      "tests": [],
+      "notes": "Today selection uses weakness only; no intervals. Needs a migration. Background: research/spaced-retrieval-japanese-learning.md."
+    },
+    {
+      "id": "reverse-practice",
+      "title": "Reverse direction practice (romaji/meaning → kana) and listening practice",
+      "area": "fullstack",
+      "status": "pending",
+      "files": [],
+      "tests": [],
+      "notes": "Idea from the research note; not designed yet."
+    },
+    {
+      "id": "admin-chapter-test-stats",
+      "title": "Chapter test numbers in admin statistics",
+      "area": "fullstack",
+      "status": "pending",
+      "files": ["backend/app/api/admin.py", "frontend/src/pages/AdminPage.tsx", "docs/api.md"],
+      "tests": [],
+      "notes": "Also consider moving the 90-day visit pruning out of GET /overview."
+    },
+    {
+      "id": "legacy-auth-cleanup",
+      "title": "Remove learner-account leftovers",
+      "area": "backend",
+      "status": "pending",
+      "files": ["backend/app/api/auth.py", "backend/app/cli.py", "backend/app/models.py", "backend/app/main.py", "backend/app/config.py"],
+      "tests": ["backend/tests/test_api.py::test_learner_accounts_are_disabled_even_if_registration_flag_is_set"],
+      "notes": "410 auth endpoints, cli.py --password flag, AuthSession model, app.state.login_limiter, allow_registration/session_days settings. Dropping AuthSession needs a migration."
+    },
+    {
+      "id": "dedupe-helpers",
+      "title": "Merge duplicated helpers",
+      "area": "backend",
+      "status": "pending",
+      "files": ["backend/app/services/progress.py", "backend/app/services/selection.py", "backend/app/api/sessions.py", "backend/app/api/lessons.py", "backend/app/services/romaji.py", "backend/app/services/listening.py", "backend/app/content/validation.py"],
+      "tests": ["backend/tests/test_services.py"],
+      "notes": "Two focus_items with different tie-breaks, two _progress_out, three kana→hiragana helpers. Check which tie-break is intended before merging."
+    },
+    {
+      "id": "alembic-path-separator",
+      "title": "Add path_separator = os to alembic.ini",
+      "area": "backend",
+      "status": "pending",
+      "files": ["backend/alembic.ini"],
+      "tests": ["backend/tests/"],
+      "notes": "Silences an Alembic DeprecationWarning during tests."
+    },
+    {
+      "id": "license",
+      "title": "Choose a licence",
+      "area": "repo",
+      "status": "decision_needed",
+      "files": ["LICENSE", "README.md"],
+      "tests": [],
+      "notes": "README says no licence has been chosen. Only the user can pick one."
+    }
+  ]
+}
