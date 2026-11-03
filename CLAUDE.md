@@ -98,7 +98,7 @@ Single checks, from the package directory:
 **Git**
 - Commit or push only when the user asks. Stage explicit paths, never `git add -A`/`.`.
 - End commit messages with `Co-Authored-By: Claude Code <noreply@anthropic.com>`.
-- No licence has been chosen; do not add one unless the user picks it.
+- The code is MIT licensed (`LICENSE`); the VOICEVOX clips stay under their own voice terms.
 
 ## Guardrails (`.claude/`)
 

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-03",
   "statuses": {
     "implemented": "Committed, covered by the listed tests, all checks pass.",
     "in_progress": "Code exists (often uncommitted) but is not finished, committed or verified.",
@@ -173,10 +173,10 @@
       "id": "license",
       "title": "Choose a licence",
       "area": "repo",
-      "status": "decision_needed",
+      "status": "implemented",
       "files": ["LICENSE", "README.md"],
       "tests": [],
-      "notes": "README says no licence has been chosen. Only the user can pick one."
+      "notes": "User chose MIT on 2026-11-03. VOICEVOX clips keep their own voice terms."
     }
   ]
 }

@@ -127,6 +127,6 @@ See [Development](docs/development.md) for content editing and Alembic migration
 
 **Status: MVP.** This is an early self-hosted learning app. Learner login is temporarily disabled so the app can be shared publicly; progress is per browser. Verify backups and deployment settings before relying on it for long-term data storage. Browser and mobile testing is ongoing.
 
-No license has been chosen yet. Do not assume permission to redistribute or reuse this project.
+The source code is released under the [MIT License](LICENSE). The VOICEVOX audio clips below keep their own terms and are not covered by the MIT License.
 
 Listening test audio was generated with VOICEVOX (**VOICEVOX:四国めたん**) and is used under the [voice terms](https://zunko.jp/con_ongen_kiyaku.html); keep that credit with the clips. See [Development](docs/development.md#listening-test-audio) for re-recording.
