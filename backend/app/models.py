@@ -60,6 +60,8 @@ class User(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     username: Mapped[str] = mapped_column(String(32), unique=True)
+    email: Mapped[str | None] = mapped_column(String(254), unique=True, default=None)
+    """Lower-case address of a registered learner; ``None`` for anonymous browsers."""
     password_hash: Mapped[str] = mapped_column(String(255))
     display_name: Mapped[str] = mapped_column(String(64))
     created_at: Mapped[datetime] = mapped_column(UTCDateTime(), default=utcnow)

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from datetime import datetime
 from typing import Literal
 
@@ -12,11 +13,26 @@ class APIModel(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 
+_EMAIL_PATTERN = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+
+def _normalize_email(value: str) -> str:
+    value = value.strip().lower()
+    if len(value) > 254 or not _EMAIL_PATTERN.fullmatch(value):
+        raise ValueError("invalid email")
+    return value
+
+
 class RegisterRequest(APIModel):
-    username: str = Field(min_length=3, max_length=32, pattern=r"^[a-zA-Z0-9_.-]+$")
+    email: str = Field(max_length=254)
     password: str = Field(min_length=8, max_length=128)
     display_name: str | None = Field(default=None, max_length=64)
     registration_code: str | None = Field(default=None, max_length=256)
+
+    @field_validator("email")
+    @classmethod
+    def email_valid(cls, value: str) -> str:
+        return _normalize_email(value)
 
     @field_validator("display_name")
     @classmethod
@@ -29,19 +45,28 @@ class RegisterRequest(APIModel):
 
 
 class LoginRequest(APIModel):
-    username: str = Field(min_length=3, max_length=32, pattern=r"^[a-zA-Z0-9_.-]+$")
+    email: str = Field(max_length=254)
     password: str = Field(min_length=1, max_length=128)
+
+    @field_validator("email")
+    @classmethod
+    def email_valid(cls, value: str) -> str:
+        return _normalize_email(value)
 
 
 class UserOut(APIModel):
     id: int
-    username: str
+    email: str | None
     display_name: str
     created_at: datetime
 
 
 class UserResponse(APIModel):
     user: UserOut
+
+
+class MeResponse(APIModel):
+    user: UserOut | None
 
 
 class ConfigResponse(APIModel):

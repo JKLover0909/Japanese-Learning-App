@@ -18,8 +18,9 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_prefix="JP_", extra="ignore")
 
     database_url: str = f"sqlite:///{REPO_ROOT / 'data' / 'app.db'}"
-    allow_registration: bool = False
+    allow_registration: bool = True
     registration_code: str = ""
+    """When non-empty, new accounts must send this code."""
     admin_username: str = ""
     admin_password_hash: str = ""
     session_days: int = Field(default=30, ge=1, le=365)

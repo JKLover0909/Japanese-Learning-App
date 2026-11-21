@@ -87,6 +87,7 @@ def create_app(
     app.state.engine = engine
     app.state.session_factory = session_factory
     app.state.login_limiter = FailureLimiter()
+    app.state.register_limiter = FailureLimiter(max_failures=10)
     app.state.admin_login_limiter = FailureLimiter()
     app.state.audio = audio if audio is not None else load_audio_library()
     app.add_middleware(SecurityHeadersMiddleware)
@@ -105,8 +106,8 @@ def create_app(
     @app.get("/api/config", response_model=ConfigResponse)
     def public_config() -> dict[str, object]:
         return {
-            "registration_open": False,
-            "registration_code_required": False,
+            "registration_open": settings.allow_registration,
+            "registration_code_required": bool(settings.registration_code),
             "session_size": settings.session_size,
             "focus_size": settings.focus_size,
         }

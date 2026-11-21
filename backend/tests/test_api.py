@@ -54,14 +54,12 @@ def register(client: TestClient) -> None:
 def test_auth_csrf_login_logout(client: TestClient) -> None:
     assert (
         client.post(
-            "/api/auth/register", json={"username": "lan", "password": "password123"}
+            "/api/auth/register", json={"email": "lan@example.com", "password": "password123"}
         ).status_code
         == 403
     )
     register(client)
-    assert client.get("/api/auth/me").status_code == 410
-    for path in ("login", "register", "logout"):
-        assert client.post(f"/api/auth/{path}", headers=HEADERS).status_code == 410
+    assert client.get("/api/auth/me").json() == {"user": None}
     assert client.get("/api/admin/overview").status_code == 401
     login = client.post(
         "/api/admin/login",
@@ -125,19 +123,19 @@ def test_lessons_session_answer_and_double_submit(client: TestClient) -> None:
     assert summary.json()["next_focus"][0]["weakness"] == 2
 
 
-def test_learner_accounts_are_disabled_even_if_registration_flag_is_set(tmp_path: Path) -> None:
+def test_registration_can_be_closed(tmp_path: Path) -> None:
     settings = Settings(
         database_url=f"sqlite:///{tmp_path / 'closed.db'}",
         content_dir=tmp_path,
-        allow_registration=True,
+        allow_registration=False,
     )
     with TestClient(create_app(settings, lessons=[])) as client:
         response = client.post(
             "/api/auth/register",
             headers=HEADERS,
-            json={"username": "lan", "password": "password123"},
+            json={"email": "lan@example.com", "password": "password123"},
         )
-        assert response.status_code == 410
+        assert response.status_code == 403
         assert client.get("/api/config").json()["registration_open"] is False
 
 
