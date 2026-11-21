@@ -50,7 +50,7 @@ export function AdminLoginPage() {
         <Brand />
         <p className="eyebrow">KHU VỰC QUẢN TRỊ</p>
         <h1 id="admin-login-heading">Đăng nhập quản trị</h1>
-        <p className="auth-intro">Người học không cần đăng nhập. Trang này chỉ dành cho quản trị viên.</p>
+        <p className="auth-intro">Đây là đăng nhập riêng của quản trị viên, không liên quan đến tài khoản người học.</p>
         <form className="form-stack" onSubmit={(event) => void submit(event)}>
           {error && <p className="form-error" role="alert">{error}</p>}
           <label className="field-label">Tên đăng nhập

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Link, Navigate, Outlet, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom';
 import { api, errorMessage } from '../api/client';
 import { AppLayout } from '../components/AppLayout';
 import { LoadError } from '../components/LoadError';
@@ -10,6 +10,7 @@ import { LessonPage } from '../pages/LessonPage';
 import { PracticePage } from '../pages/PracticePage';
 import { SummaryPage } from '../pages/SummaryPage';
 import { AdminLoginPage, AdminPage } from '../pages/AdminPage';
+import { LoginPage, RegisterPage } from '../pages/AuthPages';
 import { ChapterTestPage } from '../pages/ChapterTestPage';
 import { ChapterTestResultPage } from '../pages/ChapterTestResultPage';
 
@@ -38,8 +39,8 @@ function LearnerOutlet() {
 
 export function AppRouter() {
   return <BrowserRouter><Routes>
-    <Route path="/login" element={<Navigate to="/" replace />} />
-    <Route path="/register" element={<Navigate to="/" replace />} />
+    <Route path="/login" element={<LoginPage />} />
+    <Route path="/register" element={<RegisterPage />} />
     <Route path="/admin/login" element={<AdminLoginPage />} />
     <Route path="/admin" element={<AdminPage />} />
     <Route element={<LearnerOutlet />}>

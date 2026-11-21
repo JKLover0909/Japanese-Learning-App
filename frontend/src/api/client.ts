@@ -11,10 +11,14 @@ import type {
   LessonDetailResponse,
   LessonsResponse,
   ListSessionsParams,
+  LoginRequest,
+  MeResponse,
+  RegisterRequest,
   SessionDetail,
   SessionsResponse,
   SessionSummary,
   StatusResponse,
+  UserResponse,
 } from './types';
 
 /** Header required by the backend's CSRF guard on every state-changing request. */
@@ -145,6 +149,15 @@ export const api = {
 
   /** Issues or refreshes the anonymous learner cookie; call before other learner requests. */
   initLearner: () => request<StatusResponse>('POST', '/learner/init'),
+
+  /** The signed-in account, or `{ user: null }`. Does not create an anonymous identity. */
+  me: (signal?: AbortSignal) => request<MeResponse>('GET', '/auth/me', { signal }),
+
+  register: (body: RegisterRequest) => request<UserResponse>('POST', '/auth/register', { body }),
+
+  login: (body: LoginRequest) => request<UserResponse>('POST', '/auth/login', { body }),
+
+  logout: () => request<void>('POST', '/auth/logout'),
 
   adminLogin: (body: AdminLoginRequest) => request<StatusResponse>('POST', '/admin/login', { body }),
 

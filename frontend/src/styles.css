@@ -214,6 +214,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .auth-switch a { color: var(--accent); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .auth-note { margin: 18px 0 0; color: var(--accent); font-family: var(--font-jp); font-size: 14px; letter-spacing: .03em; }
 .auth-note span { color: var(--muted); font-family: var(--font-sans); font-size: 11px; }
+.auth-fineprint { margin: 16px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.account-menu { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.account-name { max-width: 150px; overflow: hidden; color: var(--text-secondary); font-size: 13px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
 
 /* Practice */
 .practice-page { width: min(660px, 100%); margin: 0 auto; }
@@ -446,6 +449,7 @@ kbd { padding: 2px 5px; border: 1px solid var(--border-strong); border-radius: 4
   .nav-link { font-size: 11px; }
   .theme-toggle { min-height: 36px; padding: 6px 8px; gap: 0; }
   .theme-toggle-label { display: none; }
+  .account-name { display: none; }
   .main-content { padding-top: 23px; }
   .page-stack { gap: 28px; }
   .welcome-banner { min-height: 154px; padding: 21px 18px; border-radius: var(--radius-lg); }

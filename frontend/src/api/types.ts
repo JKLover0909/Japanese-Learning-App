@@ -249,7 +249,36 @@ export interface AnswerRequest {
   answer: string;
 }
 
+export interface RegisterRequest {
+  email: string;
+  password: string;
+  display_name?: string;
+  registration_code?: string;
+}
+
+export interface LoginRequest {
+  email: string;
+  password: string;
+}
+
 // Response envelopes
+
+/** A signed-in learner account; anonymous browsers have no AuthUser. */
+export interface AuthUser {
+  id: number;
+  email: string | null;
+  display_name: string;
+  created_at: IsoDateTime;
+}
+
+export interface UserResponse {
+  user: AuthUser;
+}
+
+/** `user` is null when nobody is signed in. */
+export interface MeResponse {
+  user: AuthUser | null;
+}
 
 export interface StatusResponse {
   status: 'ok';
