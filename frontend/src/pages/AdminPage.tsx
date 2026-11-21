@@ -5,6 +5,7 @@ import { api, errorMessage, isApiError } from '../api/client';
 import type { AdminOverview } from '../api/types';
 import { LoadError } from '../components/LoadError';
 import { PageStatus } from '../components/PageStatus';
+import { ThemeToggle } from '../components/ThemeMode';
 
 const numberFormat = new Intl.NumberFormat('vi-VN');
 
@@ -44,6 +45,7 @@ export function AdminLoginPage() {
 
   return (
     <main className="auth-page">
+      <div className="auth-theme-toggle"><ThemeToggle /></div>
       <section className="auth-card" aria-labelledby="admin-login-heading">
         <Brand />
         <p className="eyebrow">KHU VỰC QUẢN TRỊ</p>
@@ -71,7 +73,7 @@ function AdminShell({ children, actions }: { children: ReactNode; actions?: Reac
       <header className="site-header"><div className="header-inner">
         <Brand />
         <span className="admin-label">Quản trị</span>
-        <div className="admin-actions">{actions}</div>
+        <div className="admin-actions"><ThemeToggle />{actions}</div>
       </div></header>
       <main className="main-content">{children}</main>
     </div>

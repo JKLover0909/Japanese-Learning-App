@@ -3,6 +3,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { ApiError, api } from '../api/client';
 import type { AdminOverview } from '../api/types';
+import { ThemeModeProvider } from '../components/ThemeMode';
 import { AdminLoginPage, AdminPage } from './AdminPage';
 
 vi.mock('../api/client', async (importOriginal: () => Promise<{ api: typeof api }>) => {
@@ -26,12 +27,14 @@ const overview: AdminOverview = {
 
 function renderAdmin(path: string) {
   return render(
-    <MemoryRouter initialEntries={[path]}>
-      <Routes>
-        <Route path="/admin/login" element={<AdminLoginPage />} />
-        <Route path="/admin" element={<AdminPage />} />
-      </Routes>
-    </MemoryRouter>,
+    <ThemeModeProvider>
+      <MemoryRouter initialEntries={[path]}>
+        <Routes>
+          <Route path="/admin/login" element={<AdminLoginPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+        </Routes>
+      </MemoryRouter>
+    </ThemeModeProvider>,
   );
 }
 

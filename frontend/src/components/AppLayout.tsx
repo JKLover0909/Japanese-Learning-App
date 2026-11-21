@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { ThemeToggle } from './ThemeMode';
 
 export function AppLayout({ children }: { children: ReactNode }) {
   return <div className="app-shell">
@@ -9,6 +10,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
         <NavLink to="/" end className={({ isActive }) => `nav-link${isActive ? ' is-active' : ''}`}>Bài học</NavLink>
         <NavLink to="/history" className={({ isActive }) => `nav-link${isActive ? ' is-active' : ''}`}>Lịch sử</NavLink>
       </nav>
+      <ThemeToggle />
     </div></header>
     <main className="main-content">{children}</main>
     <footer className="site-footer"><span>Tiến độ lưu theo cookie trình duyệt. Xóa cookie hoặc đổi thiết bị sẽ có tiến độ riêng.</span><span lang="ja" className="footer-japanese">一歩ずつ</span></footer>
