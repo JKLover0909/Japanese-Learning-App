@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-21",
   "statuses": {
     "implemented": "Committed, covered by the listed tests, all checks pass.",
     "in_progress": "Code exists (often uncommitted) but is not finished, committed or verified.",
@@ -74,37 +74,37 @@
       "id": "chapter-test-sample-question",
       "title": "Unscored sample question before the chapter test",
       "area": "fullstack",
-      "status": "in_progress",
+      "status": "implemented",
       "files": ["backend/app/api/schemas.py", "backend/app/api/chapter_tests.py", "frontend/src/api/types.ts", "frontend/src/pages/ChapterTestPage.tsx", "docs/api.md"],
       "tests": ["backend/tests/test_chapter_test.py", "frontend/src/pages/ChapterTestPage.test.tsx"],
-      "notes": "Uncommitted in the working tree as of 2026-11-01; tests pass. Adds ChapterTestExampleOut / test.example."
+      "notes": "Committed 2026-11-21. Adds ChapterTestExampleOut / test.example; the example is unscored and excluded from results."
     },
     {
       "id": "theme-mode",
       "title": "Light/dark/system theme toggle",
       "area": "frontend",
-      "status": "in_progress",
+      "status": "implemented",
       "files": ["frontend/src/components/ThemeMode.tsx", "frontend/src/main.tsx", "frontend/src/components/AppLayout.tsx", "frontend/src/pages/AdminPage.tsx", "frontend/src/styles.css"],
       "tests": ["frontend/src/components/ThemeMode.test.tsx"],
-      "notes": "ThemeMode.tsx and its test are untracked as of 2026-11-01."
+      "notes": "Committed 2026-11-21."
     },
     {
       "id": "lesson-kana-table",
       "title": "Kana reference table on the lesson page",
       "area": "frontend",
-      "status": "in_progress",
+      "status": "implemented",
       "files": ["frontend/src/pages/LessonPage.tsx", "frontend/src/styles.css"],
       "tests": ["frontend/src/pages/LessonPage.test.tsx"],
-      "notes": "Uncommitted; LessonPage.test.tsx is untracked. An earlier TS2352 tuple-cast error is fixed in the working tree."
+      "notes": "Committed 2026-11-21."
     },
     {
       "id": "track-build-configs",
       "title": "Commit frontend build configs (tsconfig*, vite.config.ts, eslint.config.js)",
       "area": "tooling",
-      "status": "pending",
+      "status": "implemented",
       "files": ["frontend/tsconfig.json", "frontend/tsconfig.app.json", "frontend/tsconfig.node.json", "frontend/vite.config.ts", "frontend/eslint.config.js"],
       "tests": ["scripts/check.sh --build"],
-      "notes": "Untracked, so a fresh clone and the Docker build fail at npm run build. Highest-priority repo fix."
+      "notes": "Committed 2026-11-21, so a clean clone can run the frontend checks and the build."
     },
     {
       "id": "unused-cjk-font",

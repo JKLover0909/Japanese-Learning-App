@@ -14,6 +14,22 @@ Template:
 - Next:
 ```
 
+## 2026-11-21 — Commit the in-progress work (before starting user accounts)
+- Done: committed the frontend build configs (`track-build-configs`) and the three in-progress
+  features as separate commits: dark theme styles, theme mode, kana table, chapter-test sample
+  question (backend, API docs and UI) and the practice prompt wording. Rebased onto `origin/main`
+  (`7990bea`) without conflicts. Marked those four features `implemented`.
+- In progress (files touched, uncommitted?): only the untracked, unused
+  `frontend/public/assets/noto-sans-cjk.ttc` (18.6 MB) remains; deliberately not committed.
+  Not pushed yet.
+- Validation: scripts/check.sh --build → pass after the rebase.
+- Blockers / decisions needed: keep or delete `noto-sans-cjk.ttc`. Google OAuth needs a client
+  id/secret created by the user and an ngrok/Cloudflare HTTPS URL (Google rejects LAN and
+  Tailscale IPs).
+- Next: user accounts (email + password, Google sign-in) per the approved plan in
+  `~/.claude/plans/declarative-swimming-gizmo.md`: migration `0007_user_accounts`, `/api/auth/*`,
+  login and register pages.
+
 ## 2026-11-03 — MIT licence
 - Done: added `LICENSE` (MIT, chosen by the user); updated the README licence section, the
   `CLAUDE.md` git rule and the `license` entry in `feature_list.json`. No application code changed.
