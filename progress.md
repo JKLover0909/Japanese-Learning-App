@@ -14,23 +14,34 @@ Template:
 - Next:
 ```
 
-## 2026-11-21 — Learner accounts (email + password), uncommitted
-- Done: optional accounts. Backend: migration `0007_user_accounts` (`users.email`, unique),
-  `/api/auth/register|login|logout|me`, `deps.get_current_user` (login session first, then the
-  anonymous cookie), rate limits, `JP_ALLOW_REGISTRATION` / `JP_REGISTRATION_CODE`. Frontend:
-  `/login`, `/register`, `AuthContext`, account menu in the header. Updated `docs/api.md`,
-  `docs/architecture.md`, `README.md`, `CLAUDE.md`, `AGENTS.md`, `.env.example`.
+## 2026-11-21 — Learner accounts (email + password)
+- Done: optional accounts, committed and pushed (`d9e49af`, `1c32c3f`, `9e2edbf`). Backend:
+  migration `0007_user_accounts` (`users.email`, unique), `/api/auth/register|login|logout|me`,
+  `deps.get_current_user` (login session first, then the anonymous cookie), rate limits,
+  `JP_ALLOW_REGISTRATION` / `JP_REGISTRATION_CODE`. Frontend: `/login`, `/register`,
+  `AuthContext`, account menu in the header. Docs updated (`docs/api.md`,
+  `docs/architecture.md`, `README.md`, `CLAUDE.md`, `AGENTS.md`).
   Design: registering converts the browser's anonymous user in place (progress kept) and revokes
   the `jp_learner` cookie; logging in does not merge anonymous progress.
-- In progress (files touched, uncommitted?): all of the above is uncommitted and not pushed.
-  `.env.example` could not be edited (permission rule denies it): add the three `JP_` settings
-  by hand (documented in README). The running server on :8010 still runs the old code.
-- Validation: scripts/check.sh --build → pass (pytest, vitest 42, tsc, eslint, build). Migration
-  0007 checked upgrade → downgrade → upgrade on a throwaway SQLite DB with existing rows.
-- Blockers / decisions needed: Google sign-in needs a user-created OAuth client and an https
-  URL. Restart the app to load the new code (migration runs on startup against the real DB:
-  back it up first). `noto-sans-cjk.ttc` is kept, untracked.
-- Next: commit and push when the user agrees; restart; then `google-sign-in` if wanted.
+- Deployed: the app on `0.0.0.0:8010` runs the new code and migration `0007` has run on the real
+  database. A consistent backup was taken first: `data/app.db.bak-2026-11-21-1404`
+  (SQLite backup API, `integrity_check` ok, at revision `0006_chapter_tests`). Smoke-tested with
+  `curl` on the live server: register, me, logout, wrong password 401, login, duplicate email 409,
+  missing CSRF header 403, old anonymous cookie revoked after registering.
+- In progress (files touched, uncommitted?): nothing. The only untracked file is the unused
+  `frontend/public/assets/noto-sans-cjk.ttc`, kept on purpose.
+- Validation: scripts/check.sh --build → pass (pytest 69, vitest 42, tsc, eslint, build).
+- Blockers / decisions needed:
+  - The new login/register UI has only been tested automatically, not looked at in a browser
+    (layout, dark theme, phone width). The user is checking it.
+  - Two test accounts remain in the real database: `smoke-test@example.invalid` and
+    `smoke-test2@example.invalid`. Delete them (user action; the guard hook protects `data/`).
+  - `.env.example` still lacks `JP_ALLOW_REGISTRATION`, `JP_REGISTRATION_CODE` and
+    `JP_SESSION_DAYS` (a permission rule denies edits to it); they are documented in the README.
+  - No email verification and no password reset (needs SMTP).
+  - Google sign-in (`google-sign-in`) needs a user-created OAuth client
+    (`JP_GOOGLE_CLIENT_ID/SECRET` in `.env`) and an https URL such as ngrok; no tunnel is running.
+- Next: fix whatever the user finds in the UI; then `google-sign-in` when the user is ready.
 
 ## 2026-11-21 — Commit the in-progress work (before starting user accounts)
 - Done: committed the frontend build configs (`track-build-configs`) and the three in-progress
