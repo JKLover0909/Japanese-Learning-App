@@ -2,7 +2,8 @@
 
 Self-hosted app for Vietnamese learners practising kana, greetings and numbers by typing romaji, plus a
 chapter 1 listening test. One FastAPI process serves `/api` and the built React SPA. Learners are
-anonymous (cookie `jp_learner`); only the admin statistics page has a login.
+anonymous by default (cookie `jp_learner`); a learner may register an account (email + password,
+cookie `jp_session`) to keep progress across devices. The admin statistics page has its own separate login.
 
 Read these before changing the matching area; they are the source of truth and this file does not
 repeat them:

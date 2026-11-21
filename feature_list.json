@@ -144,12 +144,39 @@
     },
     {
       "id": "legacy-auth-cleanup",
-      "title": "Remove learner-account leftovers",
+      "title": "Remove the cli.py --password flag",
       "area": "backend",
       "status": "pending",
-      "files": ["backend/app/api/auth.py", "backend/app/cli.py", "backend/app/models.py", "backend/app/main.py", "backend/app/config.py"],
-      "tests": ["backend/tests/test_api.py::test_learner_accounts_are_disabled_even_if_registration_flag_is_set"],
-      "notes": "410 auth endpoints, cli.py --password flag, AuthSession model, app.state.login_limiter, allow_registration/session_days settings. Dropping AuthSession needs a migration."
+      "files": ["backend/app/cli.py"],
+      "tests": [],
+      "notes": "Superseded in part by user-accounts: the 410 auth endpoints, AuthSession, login_limiter and allow_registration/session_days are now used. What remains is the cli.py flag that takes a password as an argument."
+    },
+    {
+      "id": "user-accounts",
+      "title": "Optional learner accounts (email + password)",
+      "area": "fullstack",
+      "status": "implemented",
+      "files": ["backend/app/api/auth.py", "backend/app/api/deps.py", "backend/app/api/schemas.py", "backend/app/models.py", "backend/alembic/versions/0007_user_accounts.py", "frontend/src/pages/AuthPages.tsx", "frontend/src/components/AuthContext.tsx", "frontend/src/components/AppLayout.tsx", "docs/api.md"],
+      "tests": ["backend/tests/test_auth.py", "frontend/src/pages/AuthPages.test.tsx"],
+      "notes": "Registering converts the browser's anonymous user in place and revokes the jp_learner cookie; login does not merge. No email verification and no password reset. Google sign-in is not implemented (needs a Google OAuth client and an https redirect URL; see google-sign-in)."
+    },
+    {
+      "id": "google-sign-in",
+      "title": "Sign in with Google",
+      "area": "fullstack",
+      "status": "pending",
+      "files": ["backend/app/api/auth.py", "backend/app/config.py", "backend/app/models.py"],
+      "tests": [],
+      "notes": "Planned in ~/.claude/plans/declarative-swimming-gizmo.md: authorization code + PKCE with httpx, google_sub column, link by verified email only. Blocked on a user-created Google OAuth client (JP_GOOGLE_CLIENT_ID/SECRET in .env) and an https redirect URL (ngrok); Google rejects LAN and Tailscale IPs."
+    },
+    {
+      "id": "password-reset-email-verification",
+      "title": "Password reset and email verification",
+      "area": "fullstack",
+      "status": "pending",
+      "files": [],
+      "tests": [],
+      "notes": "Needs SMTP. Without it a forgotten password cannot be recovered."
     },
     {
       "id": "dedupe-helpers",

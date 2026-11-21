@@ -14,6 +14,24 @@ Template:
 - Next:
 ```
 
+## 2026-11-21 — Learner accounts (email + password), uncommitted
+- Done: optional accounts. Backend: migration `0007_user_accounts` (`users.email`, unique),
+  `/api/auth/register|login|logout|me`, `deps.get_current_user` (login session first, then the
+  anonymous cookie), rate limits, `JP_ALLOW_REGISTRATION` / `JP_REGISTRATION_CODE`. Frontend:
+  `/login`, `/register`, `AuthContext`, account menu in the header. Updated `docs/api.md`,
+  `docs/architecture.md`, `README.md`, `CLAUDE.md`, `AGENTS.md`, `.env.example`.
+  Design: registering converts the browser's anonymous user in place (progress kept) and revokes
+  the `jp_learner` cookie; logging in does not merge anonymous progress.
+- In progress (files touched, uncommitted?): all of the above is uncommitted and not pushed.
+  `.env.example` could not be edited (permission rule denies it): add the three `JP_` settings
+  by hand (documented in README). The running server on :8010 still runs the old code.
+- Validation: scripts/check.sh --build → pass (pytest, vitest 42, tsc, eslint, build). Migration
+  0007 checked upgrade → downgrade → upgrade on a throwaway SQLite DB with existing rows.
+- Blockers / decisions needed: Google sign-in needs a user-created OAuth client and an https
+  URL. Restart the app to load the new code (migration runs on startup against the real DB:
+  back it up first). `noto-sans-cjk.ttc` is kept, untracked.
+- Next: commit and push when the user agrees; restart; then `google-sign-in` if wanted.
+
 ## 2026-11-21 — Commit the in-progress work (before starting user accounts)
 - Done: committed the frontend build configs (`track-build-configs`) and the three in-progress
   features as separate commits: dark theme styles, theme mode, kana table, chapter-test sample

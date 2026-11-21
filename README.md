@@ -1,6 +1,6 @@
 # Japanese Learning App
 
-A small, self-hostable Japanese kana practice app. Learners open the link and practise straight away, with no account. They work through six lessons and answer in romaji. The FastAPI backend checks answers and stores each browser's progress in SQLite; the React frontend works on desktop and mobile browsers. A separate, password-protected admin page shows aggregate usage statistics.
+A small, self-hostable Japanese kana practice app. Learners open the link and practise straight away, with no account; they can optionally register one (email and password) to keep progress across devices. They work through six lessons and answer in romaji. The FastAPI backend checks answers and stores each browser's progress in SQLite; the React frontend works on desktop and mobile browsers. A separate, password-protected admin page shows aggregate usage statistics.
 
 ## Features
 
@@ -8,7 +8,7 @@ A small, self-hostable Japanese kana practice app. Learners open the link and pr
 - Practice rounds contain 20 questions by default, with up to five focus questions selected from frequently missed items. Misses increase an item's weakness score by two; each later correct answer reduces it by one.
 - A correct answer shows "Chính xác!" for about 0.7 seconds, then the next question opens automatically (Enter skips the wait). A wrong answer or "Không biết" (I don't know) keeps the expected reading on screen until the learner presses "Câu tiếp theo" (Next question) or Enter.
 - Server-side answer checking accepts common spelling variants, including `shi`/`si`, `tsu`/`tu`, `chi`/`ti`, `ja`/`zya`, long-vowel spellings such as `gakkou`/`gakkoo`, and macrons such as `kōhī`.
-- No learner login: an HttpOnly cookie gives each browser its own anonymous progress. Progress does not follow a learner to another browser or device, and clearing cookies starts over.
+- Anonymous by default: an HttpOnly cookie gives each browser its own progress. Optional accounts (email and password, no email verification and no password reset) carry progress across devices; registering keeps the progress already made in that browser. Without an account, progress does not follow a learner to another browser and clearing cookies starts over.
 - Admin statistics at `/admin` (separate login): anonymous browsers, recent activity, questions and answers, and visits per day. Only aggregate counts are shown; no IP addresses or answers are stored for statistics.
 - End-of-chapter listening test: lessons 1–5 form chapter 1, and its test copies the paper "listen and circle" test with 30 questions. The learner hears a kana or word and picks it from four written options a–d. Each attempt draws new questions, distractors, and answer positions. Choices can be changed until "Nộp bài" (Submit), after which the score, per-part results, and the correct options are shown.
 - SQLite persistence and Alembic migrations, applied automatically on startup.
@@ -48,7 +48,7 @@ To test from a phone on a different network, keep `./scripts/serve.sh` running a
 
 ngrok requires installation and a configured account authtoken (`ngrok config add-authtoken <token>`). Cloudflare quick tunnels require `cloudflared` installed locally. Both produce temporary public URLs that change when the tunnel restarts.
 
-**Security:** A tunnel makes the whole app reachable from the public internet. Anyone with the link can practise anonymously; only `/admin` is protected, by the admin password. Set it up before sharing the link (see [Admin statistics](#admin-statistics)), never commit `.env`, and remember that public tunnel URLs are not a substitute for production hosting.
+**Security:** A tunnel makes the whole app reachable from the public internet. Anyone with the link can practise anonymously or register an account (set `JP_ALLOW_REGISTRATION=false` or `JP_REGISTRATION_CODE` in `.env` to restrict that); `/admin` is protected by the admin password. Set it up before sharing the link (see [Admin statistics](#admin-statistics)), never commit `.env`, and remember that public tunnel URLs are not a substitute for production hosting.
 
 ## Docker
 
@@ -76,6 +76,9 @@ All app settings use the `JP_` prefix. Copy `.env.example` to `.env` for local o
 | `JP_DATABASE_URL` | Repository `data/app.db` SQLite file | SQLAlchemy database URL. |
 | `JP_ADMIN_USERNAME` | Empty | Admin statistics username. Admin login is disabled while empty. |
 | `JP_ADMIN_PASSWORD_HASH` | Empty | Argon2 hash written by `set_admin_password.py`. Never the password itself. |
+| `JP_ALLOW_REGISTRATION` | `true` | `false` closes learner registration (existing accounts can still log in). |
+| `JP_REGISTRATION_CODE` | Empty | When set, new accounts must enter this code. Keep it in `.env`, never in the repository. |
+| `JP_SESSION_DAYS` | `30` | Lifetime of a learner login session, in days. |
 | `JP_COOKIE_SECURE` | `auto` | `auto` follows the request scheme; alternatively `true` or `false`. |
 | `JP_CONTENT_DIR` | `backend/app/content/lessons` | Source JSON lesson directory. |
 | `JP_FRONTEND_DIST` | `frontend/dist` | Built SPA directory served by FastAPI. |
@@ -125,7 +128,7 @@ See [Development](docs/development.md) for content editing and Alembic migration
 
 ## Status and license
 
-**Status: MVP.** This is an early self-hosted learning app. Learner login is temporarily disabled so the app can be shared publicly; progress is per browser. Verify backups and deployment settings before relying on it for long-term data storage. Browser and mobile testing is ongoing.
+**Status: MVP.** This is an early self-hosted learning app. Learner accounts are basic (email and password, no verification or password reset); without an account progress is per browser. Verify backups and deployment settings before relying on it for long-term data storage. Browser and mobile testing is ongoing.
 
 The source code is released under the [MIT License](LICENSE). The VOICEVOX audio clips below keep their own terms and are not covered by the MIT License.
 

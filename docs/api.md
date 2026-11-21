@@ -8,8 +8,9 @@ Both sides must follow it exactly. Change this file first when the API changes.
   with a `Z` or `+00:00` suffix.
 - Errors use FastAPI's shape: `{"detail": "Vietnamese, user-facing message"}`. Validation
   errors (422) use FastAPI's default list shape; the frontend shows a generic message for them.
-- Learners are anonymous: each browser is identified by an HttpOnly cookie, see
-  [Anonymous learners](#anonymous-learners). The admin statistics page has its own separate
+- Learners are anonymous by default: each browser is identified by an HttpOnly cookie, see
+  [Anonymous learners](#anonymous-learners). A learner may also create an account with an email
+  and password, see [Accounts](#accounts). The admin statistics page has its own separate
   login, see [Admin](#admin).
 - **CSRF guard:** every `POST`/`PUT`/`PATCH`/`DELETE` request to `/api/*` must send the header
   `X-Requested-With: jp-practice`. Requests without it get `403 {"detail": "..."}`.
@@ -85,10 +86,10 @@ Both sides must follow it exactly. Change this file first when the API changes.
 | Method | Path | Response |
 |---|---|---|
 | GET | `/api/health` | `200 {"status": "ok"}` |
-| GET | `/api/config` | `200 {"registration_open": false, "registration_code_required": false, "session_size": 20, "focus_size": 5}` |
+| GET | `/api/config` | `200 {"registration_open": true, "registration_code_required": false, "session_size": 20, "focus_size": 5}` |
 
-`registration_open` and `registration_code_required` are always `false` while learner accounts
-are disabled; they remain for backward compatibility.
+`registration_open` follows `JP_ALLOW_REGISTRATION` (default `true`);
+`registration_code_required` is `true` when `JP_REGISTRATION_CODE` is set.
 
 ## Anonymous learners
 
@@ -113,9 +114,52 @@ Rules:
   with empty progress. Another browser's session IDs return `404`.
 - Activity after at least 30 minutes of inactivity records one visit event (coarse timestamp
   and identity ID only; no IP address or user agent). `last_seen_at` is stored to the minute.
-- The legacy learner account endpoints `POST /api/auth/register`, `POST /api/auth/login`,
-  `POST /api/auth/logout` and `GET /api/auth/me` return `410 {"detail": "..."}` regardless
-  of the old `JP_ALLOW_REGISTRATION` setting.
+- A valid login session (see [Accounts](#accounts)) takes precedence over the anonymous cookie
+  on every lesson and session endpoint.
+
+## Accounts
+
+Optional. Email + password, no email verification, no password reset. The login session cookie
+is `jp_session`: an opaque random token whose SHA-256 hash is stored in `auth_sessions`.
+Attributes: `HttpOnly`, `SameSite=Lax`, `Path=/`, `Max-Age` = `JP_SESSION_DAYS` (default 30
+days), `Secure` as for `jp_learner`. Emails are trimmed and lower-cased; the password is 8–128
+characters and stored only as an argon2id hash. All `POST` requests need the CSRF header.
+
+```jsonc
+// RegisterRequest
+{ "email": "lan@example.com", "password": "…", "display_name": "Lan",   // display_name optional
+  "registration_code": "…" }                                            // only when required
+// LoginRequest
+{ "email": "lan@example.com", "password": "…" }
+// UserResponse
+{ "user": { "id": 7, "email": "lan@example.com", "display_name": "Lan", "created_at": "…" } }
+// MeResponse: "user" is null when nobody is signed in
+{ "user": null }
+```
+
+| Method | Path | Body | Success | Errors |
+|---|---|---|---|---|
+| POST | `/api/auth/register` | `RegisterRequest` | `201 UserResponse` + `jp_session` | `403` registration closed or wrong code, `409` email already registered, `422`, `429` |
+| POST | `/api/auth/login` | `LoginRequest` | `200 UserResponse` + `jp_session` | `401` wrong email or password (same message for both), `422`, `429` |
+| POST | `/api/auth/logout` | none | `204`; deletes the session and clears `jp_session` | `403` missing CSRF header |
+| GET | `/api/auth/me` | none | `200 MeResponse`; never creates an anonymous identity | none |
+
+Rules:
+
+- **Registering keeps the browser's progress.** When the browser has an anonymous identity, its
+  `users` row is converted in place (email, password, display name), so progress, sessions and
+  chapter tests stay attached. The `anonymous_identities` row is deleted and `jp_learner` is
+  cleared, so the old cookie can never open the account without the password. Without an
+  anonymous identity a new user is created.
+- **Logging in does not merge.** Progress made anonymously in the current browser stays with its
+  own cookie and is not copied into the account; the account's progress is what the learner sees.
+- After logout the SPA calls `POST /api/learner/init`, which gives the browser a fresh anonymous
+  identity (empty progress) before any learner page loads.
+- Failed logins are limited to 5 per client address per 5 minutes, and registration attempts to
+  10 per 5 minutes, both answered with `429 {"detail": "Thử lại sau 5 phút."}`.
+- A forged, unknown or expired `jp_session` is ignored and the request falls back to the
+  anonymous identity.
+- The admin login and cookie are unrelated to learner accounts.
 
 ## Admin
 

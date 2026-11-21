@@ -27,8 +27,8 @@ backend/
     models.py          SQLAlchemy ORM models
     security.py        password hashing (argon2), opaque tokens, cookie names
     api/               routers: learner.py, admin.py, lessons.py, sessions.py, chapter_tests.py,
-                       auth.py (disabled);
-                       deps.py (anonymous learner cookie), schemas.py
+                       auth.py (optional email + password accounts);
+                       deps.py (learner identity: login session or anonymous cookie), schemas.py
     services/
       romaji.py        kana → romaji and lenient answer checking (pure functions)
       selection.py     choose the questions for a practice session (pure, RNG injected)
@@ -58,11 +58,11 @@ Dockerfile, docker-compose.yml
 
 | Table | Purpose | Key columns |
 |---|---|---|
-| `users` | owner of progress and sessions; one row per anonymous browser (`anon-…`, login disabled) plus any legacy accounts | `username` (unique), `password_hash`, `display_name` |
+| `users` | owner of progress and sessions; one row per anonymous browser (`anon-…`, `password_hash` `!disabled`, no email) or per registered account (`u-…`, email + argon2id hash) | `username` (unique), `email` (unique, nullable, lower-case), `password_hash`, `display_name` |
 | `anonymous_identities` | browser cookie → user | `token_hash` (unique SHA-256 of `jp_learner`), `user_id` (unique), `created_at`, `last_seen_at` (minute precision) |
 | `visits` | coarse visit events for admin statistics, kept 90 days | `identity_id`, `visited_at` |
 | `admin_sessions` | admin login sessions | `token_hash` (unique SHA-256 of `jp_admin`), `expires_at` |
-| `auth_sessions` | legacy learner login sessions; no longer created | `token_hash`, `user_id`, `expires_at`, `last_used_at` |
+| `auth_sessions` | learner login sessions (cookie `jp_session`) | `token_hash` (unique SHA-256), `user_id`, `expires_at`, `last_used_at` (refreshed at most hourly) |
 | `lessons` | lesson metadata synced from JSON | `slug` (unique), `position`, `title`, `description`, `content_hash` |
 | `items` | questions synced from JSON | `lesson_id`, `key` (unique per lesson), `prompt`, `kind`, `meaning`, `readings` (JSON), `tags` (JSON), `position`, `is_active` |
 | `item_progress` | per-learner memory of each item | PK (`user_id`, `item_id`), `seen_count`, `correct_count`, `wrong_count`, `weakness`, `streak`, `last_seen_at`, `last_wrong_at` |
@@ -89,6 +89,15 @@ event, then sets a fresh cookie. A known cookie bumps `last_seen_at` (at most on
 with a compare-and-set update so concurrent requests do not double-count). Activity after at
 least 30 minutes of inactivity records another visit. The rest of the code still filters by
 `user_id`, so progress and history stay isolated per browser.
+
+**Accounts.** Every learner endpoint depends on `deps.get_current_user`: a valid, unexpired
+`jp_session` cookie resolves to that account's `users` row; anything else (missing, forged,
+expired) falls back to `get_anonymous_user` above. `AnonymousLearner` is kept as an alias so
+the endpoints did not change. Registering converts the browser's anonymous `users` row in place
+(progress stays), deletes its `anonymous_identities` row and clears `jp_learner`; otherwise the
+old cookie would reopen the account after logout without the password. Logging in to an existing
+account does not merge the browser's anonymous progress, which avoids conflicting
+`item_progress` keys. `GET /api/auth/me` only reads the session and never creates an identity.
 
 **Admin statistics.** `api/admin.py` has its own login, checked against
 `JP_ADMIN_USERNAME` / `JP_ADMIN_PASSWORD_HASH`, and its own cookie scoped to `/api/admin`.
@@ -162,16 +171,23 @@ second submit gets `409`), then scores every question from the stored choices.
 
 ## Security
 
-- Learner and admin tokens are 32 random bytes from `secrets`; only their SHA-256 hash is
-  stored. The admin password exists only as an argon2id hash (`argon2-cffi`) in the
-  environment; it is never stored in the database or sent to the frontend. Admin login is
-  closed (`503`) while the hash or username is unset.
-- `jp_learner` is `HttpOnly`, `SameSite=Lax`, 1 year. `jp_admin` is `HttpOnly`,
-  `SameSite=Strict`, `Path=/api/admin`, 12 hours. Both are `Secure` on HTTPS. State-changing
+- Learner, login-session and admin tokens are 32 random bytes from `secrets`; only their
+  SHA-256 hash is stored. The admin password exists only as an argon2id hash (`argon2-cffi`) in
+  the environment; it is never stored in the database or sent to the frontend. Admin login is
+  closed (`503`) while the hash or username is unset. Learner passwords are stored as argon2id
+  hashes in `users.password_hash`, are re-hashed on login when the parameters change, and are
+  never returned by the API.
+- `jp_learner` is `HttpOnly`, `SameSite=Lax`, 1 year. `jp_session` is `HttpOnly`,
+  `SameSite=Lax`, `JP_SESSION_DAYS` days. `jp_admin` is `HttpOnly`,
+  `SameSite=Strict`, `Path=/api/admin`, 12 hours. All are `Secure` on HTTPS. State-changing
   API calls need the `X-Requested-With: jp-practice` header (a CSRF guard, because cross-site
   forms cannot set custom headers). API responses send `Cache-Control: no-store`.
-- Admin login failures are rate limited per client address (5 per 5 minutes), whatever
-  username is submitted. Learner account registration and login are disabled (`410`).
+- Admin and learner login failures are rate limited per client address (5 per 5 minutes),
+  whatever username or email is submitted; registration attempts are limited to 10 per
+  5 minutes. The limiters are in memory, so they reset on restart and are per process. An
+  unknown email costs the same time as a wrong password (`burn_password_check`), and both
+  return the same message, so login does not reveal which emails are registered. Registration
+  does reveal an existing email (`409`), which is accepted for a no-verification signup.
 - Analytics are aggregate only. No IP address, user agent or answer text is stored for
   statistics; visit timestamps are minute-precision and pruned after 90 days. Anyone can
   create many anonymous identities, so visitor numbers are estimates, not unique people.
