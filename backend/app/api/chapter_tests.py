@@ -17,6 +17,7 @@ from app.api.schemas import (
     ChapterTestAnswerOut,
     ChapterTestAnswerRequest,
     ChapterTestDetailOut,
+    ChapterTestExampleOut,
     ChapterTestInfoOut,
     ChapterTestPartScoreOut,
     ChapterTestQuestionOut,
@@ -49,6 +50,7 @@ router = APIRouter(tags=["chapter-tests"])
 
 _NOT_FOUND = "Không tìm thấy bài kiểm tra."
 _NOT_ACTIVE = "Bài kiểm tra đã kết thúc."
+_SAMPLE_OPTIONS = ["あ", "い", "う", "え"]
 
 def _audio(request: Request) -> AudioLibrary:
     return request.app.state.audio
@@ -103,6 +105,11 @@ def _detail(test: ChapterTest, audio: AudioLibrary) -> ChapterTestDetailOut:
         created_at=test.created_at,
         completed_at=test.completed_at,
         audio_credit=audio.credit,
+        example=ChapterTestExampleOut(
+            audio_url=audio.url("あ"),
+            options=_SAMPLE_OPTIONS,
+            answer_index=0,
+        ),
         questions=[
             ChapterTestQuestionOut(
                 position=question.position,

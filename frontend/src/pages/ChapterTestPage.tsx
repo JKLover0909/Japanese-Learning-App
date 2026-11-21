@@ -17,6 +17,8 @@ export function ChapterTestPage() {
   const [loadError, setLoadError] = useState('');
   const [error, setError] = useState('');
   const [index, setIndex] = useState(0);
+  const [showExample, setShowExample] = useState(true);
+  const [exampleChoice, setExampleChoice] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
   const [needsTap, setNeedsTap] = useState(false);
   const [confirming, setConfirming] = useState(false);
@@ -72,10 +74,10 @@ export function ChapterTestPage() {
   }, []);
 
   const question = test?.questions[index];
-  const audioUrl = question?.audio_url ?? null;
+  const audioUrl = showExample ? test?.example.audio_url ?? null : question?.audio_url ?? null;
   useEffect(() => {
     if (audioUrl && test?.status === 'active') play();
-  }, [audioUrl, index, play, test?.status]);
+  }, [audioUrl, index, play, showExample, test?.status]);
 
   function goTo(next: number) {
     if (!test) return;
@@ -137,6 +139,17 @@ export function ChapterTestPage() {
 
   function handleKeyDown(event: KeyboardEvent) {
     if (event.altKey || event.ctrlKey || event.metaKey || event.repeat) return;
+    if (showExample) {
+      const sampleChoice = /^[1-4]$/.test(event.key) ? Number(event.key) - 1 : OPTION_LETTERS.indexOf(event.key.toLowerCase() as (typeof OPTION_LETTERS)[number]);
+      if (sampleChoice >= 0) {
+        event.preventDefault();
+        setExampleChoice(sampleChoice);
+      } else if (event.key.toLowerCase() === 'r') {
+        event.preventDefault();
+        play();
+      }
+      return;
+    }
     const key = event.key.toLowerCase();
     const letter = OPTION_LETTERS.indexOf(key as (typeof OPTION_LETTERS)[number]);
     const digit = /^[1-4]$/.test(key) ? Number(key) : 0;
@@ -164,6 +177,72 @@ export function ChapterTestPage() {
         <h2>Bài kiểm tra này đã được thay bằng đề mới</h2>
         <p>Mỗi chương chỉ giữ một bài đang làm. Hãy quay lại trang chính để làm tiếp.</p>
         <Link className="button button-primary" to="/">Về trang chính</Link>
+      </div>
+    );
+  }
+
+  if (showExample) {
+    const sample = test.example;
+    const isCorrect = exampleChoice === sample.answer_index;
+    return (
+      <div className="practice-page test-page">
+        <div className="practice-topbar">
+          <Link className="back-link" to="/" aria-label="Tạm dừng, về trang chính">← <span>Tạm dừng</span></Link>
+          <div className="practice-lesson-name">{test.title}</div>
+          <span className="practice-score">Câu mẫu · không tính điểm</span>
+        </div>
+        <section className="question-card test-question" aria-labelledby="sample-question-heading">
+          <div className="question-overline">
+            <span className="eyebrow" id="sample-question-heading">CÂU MẪU · NGHE VÀ CHỌN ĐÁP ÁN</span>
+          </div>
+          <p className="practice-hint">Thử chọn đáp án để làm quen với cách trả lời. Câu này không tính vào kết quả.</p>
+          <div className="listen-row">
+            <audio
+              ref={audioRef}
+              src={sample.audio_url || undefined}
+              preload="auto"
+              onPlay={() => setPlaying(true)}
+              onPause={() => setPlaying(false)}
+              onEnded={() => setPlaying(false)}
+            />
+            <button className={`listen-button${playing ? ' is-playing' : ''}`} type="button" onClick={play} disabled={!sample.audio_url} aria-label={needsTap ? 'Nghe câu mẫu' : 'Nghe lại câu mẫu'}>
+              <span className="listen-icon" aria-hidden="true">{playing ? '♪' : '▶'}</span>
+              <span>{playing ? 'Đang phát…' : needsTap ? 'Bấm để nghe' : 'Nghe lại'}</span>
+            </button>
+          </div>
+          <div className="option-grid" role="radiogroup" aria-label="Lựa chọn cho câu mẫu">
+            {sample.options.map((option, optionIndex) => {
+              const selected = exampleChoice === optionIndex;
+              const isAnswer = exampleChoice !== null && optionIndex === sample.answer_index;
+              return (
+                <button
+                  key={`sample-${optionIndex}`}
+                  className={`option-button${selected ? ' is-selected' : ''}${isAnswer ? ' is-correct' : exampleChoice !== null && selected ? ' is-wrong' : ''}`}
+                  type="button"
+                  role="radio"
+                  aria-checked={selected}
+                  onClick={() => setExampleChoice(optionIndex)}
+                >
+                  <span className="option-letter" aria-hidden="true">{OPTION_LETTERS[optionIndex]}</span>
+                  <span className="option-text" lang="ja">{option}</span>
+                </button>
+              );
+            })}
+          </div>
+          {exampleChoice !== null && (
+            <p className={`sample-feedback ${isCorrect ? 'is-correct' : 'is-wrong'}`} role="status">
+              {isCorrect ? 'Chính xác!' : 'Chưa đúng.'} Đáp án là <span lang="ja">{sample.options[sample.answer_index]}</span>.
+            </p>
+          )}
+          {error && <div className="form-error" role="alert">{error}</div>}
+          <div className="test-nav">
+            <span />
+            <button className="button button-primary" type="button" onClick={() => { cancelAdvance(); setShowExample(false); }}>
+              Bắt đầu bài kiểm tra →
+            </button>
+          </div>
+        </section>
+        <p className="practice-hint">Bài chính có {test.total} câu và được chấm điểm riêng.</p>
       </div>
     );
   }

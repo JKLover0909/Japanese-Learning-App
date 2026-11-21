@@ -210,6 +210,7 @@ class SessionSummaryOut(APIModel):
 
 TestStatus = Literal["active", "completed", "abandoned"]
 
+
 class ChapterTestInfoOut(APIModel):
     chapter: int
     title: str
@@ -224,8 +225,10 @@ class ChapterTestInfoOut(APIModel):
     last_score: int | None
     audio_credit: str
 
+
 class ChapterListResponse(APIModel):
     chapters: list[ChapterTestInfoOut]
+
 
 class ChapterTestQuestionOut(APIModel):
     position: int
@@ -234,6 +237,13 @@ class ChapterTestQuestionOut(APIModel):
     audio_url: str | None
     options: list[str]
     choice: int | None
+
+
+class ChapterTestExampleOut(APIModel):
+    audio_url: str | None
+    options: list[str]
+    answer_index: int
+
 
 class ChapterTestDetailOut(APIModel):
     id: str
@@ -247,11 +257,14 @@ class ChapterTestDetailOut(APIModel):
     created_at: datetime
     completed_at: datetime | None
     audio_credit: str
+    example: ChapterTestExampleOut
     questions: list[ChapterTestQuestionOut]
+
 
 class ChapterTestAnswerRequest(APIModel):
     position: int = Field(ge=0)
     choice: int = Field(ge=0, le=3)
+
 
 class ChapterTestAnswerOut(APIModel):
     position: int
@@ -259,11 +272,13 @@ class ChapterTestAnswerOut(APIModel):
     total: int
     answered_count: int
 
+
 class ChapterTestPartScoreOut(APIModel):
     part: str
     label: str
     correct: int
     total: int
+
 
 class ChapterTestResultQuestionOut(APIModel):
     position: int
@@ -276,10 +291,26 @@ class ChapterTestResultQuestionOut(APIModel):
     is_correct: bool
     meaning: str | None
 
+
+class ChapterTestResultTestOut(APIModel):
+    id: str
+    chapter: int
+    title: str
+    status: TestStatus
+    total: int
+    answered_count: int
+    correct_count: int | None
+    created_at: datetime
+    completed_at: datetime | None
+    audio_credit: str
+    questions: list[ChapterTestQuestionOut]
+
+
 class ChapterTestResultOut(APIModel):
-    test: ChapterTestDetailOut
+    test: ChapterTestResultTestOut
     parts: list[ChapterTestPartScoreOut]
     questions: list[ChapterTestResultQuestionOut]
+
 
 class HealthResponse(APIModel):
     status: Literal["ok"] = "ok"

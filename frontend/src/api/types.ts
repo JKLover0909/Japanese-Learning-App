@@ -177,6 +177,12 @@ export interface ChapterTestQuestion {
   choice: number | null;
 }
 
+export interface ChapterTestExample {
+  audio_url: string | null;
+  options: string[];
+  answer_index: number;
+}
+
 export interface ChapterTestDetail {
   id: string;
   chapter: number;
@@ -189,6 +195,7 @@ export interface ChapterTestDetail {
   created_at: string;
   completed_at: string | null;
   audio_credit: string;
+  example: ChapterTestExample;
   questions: ChapterTestQuestion[];
 }
 
@@ -218,8 +225,10 @@ export interface ChapterTestResultQuestion {
   meaning: string | null;
 }
 
+export type ChapterTestResultTest = Omit<ChapterTestDetail, 'example'>;
+
 export interface ChapterTestResult {
-  test: ChapterTestDetail;
+  test: ChapterTestResultTest;
   parts: ChapterTestPartScore[];
   questions: ChapterTestResultQuestion[];
 }

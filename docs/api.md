@@ -237,8 +237,11 @@ until the test is submitted.
 
 Starting a test marks the browser's other `active` test for that chapter as `abandoned`.
 Each new test draws new items, distractors and option order, and avoids the items of the
-browser's previous test of the chapter when the pool allows it. `PUT …/answers` can be
-repeated to change a choice until the test is submitted. Unanswered questions count as wrong.
+browser's previous test of the chapter when the pool allows it. The detail response includes a
+fixed, unscored `example` for learning the listening-and-selection interaction. The example is
+not persisted, included in `total`, accepted by the answer endpoint, or included in results and
+part scores. `PUT …/answers` can be repeated to change a scored choice until the test is
+submitted. Unanswered questions count as wrong.
 
 ```jsonc
 // ChapterInfo
@@ -255,13 +258,15 @@ repeated to change a choice until the test is submitted. Unanswered questions co
   "total": 30, "answered_count": 12,
   "correct_count": null,              // set only once completed
   "created_at": "…", "completed_at": null, "audio_credit": "VOICEVOX:四国めたん",
+  "example": { "audio_url": "/assets/audio/…mp3", "options": ["あ", "い", "う", "え"],
+               "answer_index": 0 },    // instructional only; excluded from scoring
   "questions": [
     { "position": 0, "part": "hiragana-char", "part_label": "Hiragana: chữ đơn",
       "audio_url": "/assets/audio/3f…e1.mp3", "options": ["る", "ろ", "う", "ら"], "choice": 1 }
   ] }
 
-// ChapterTestResult
-{ "test": ChapterTestDetail,
+// ChapterTestResult — only scored questions are included; no instructional example
+{ "test": { /* ChapterTestDetail fields except `example` */ },
   "parts": [ { "part": "hiragana-word", "label": "Hiragana: từ", "correct": 13, "total": 15 } ],
   "questions": [ { /* ChapterTestDetail question fields */
       "answer_index": 0, "is_correct": false, "meaning": "cái kéo" } ] }

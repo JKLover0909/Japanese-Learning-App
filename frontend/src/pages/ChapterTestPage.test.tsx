@@ -30,7 +30,9 @@ const test: ChapterTestDetail = {
   id: 'test-1', chapter: 1, title: 'Chương 1: Bảng chữ cái', status: 'active',
   total: 3, answered_count: 0, correct_count: null,
   created_at: '2026-10-30T04:00:00Z', completed_at: null,
-  audio_credit: 'VOICEVOX:四国めたん', questions,
+  audio_credit: 'VOICEVOX:四国めたん',
+  example: { audio_url: '/assets/audio/a.mp3', options: ['あ', 'い', 'う', 'え'], answer_index: 0 },
+  questions,
 };
 
 function renderTest() {
@@ -50,6 +52,12 @@ async function settle() {
       await Promise.resolve();
     });
   }
+}
+
+async function startScoredTest() {
+  await settle();
+  fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu bài kiểm tra →' }));
+  await settle();
 }
 
 function wait(ms: number) {
@@ -86,6 +94,14 @@ describe('ChapterTestPage', () => {
     renderTest();
     await settle();
     expect(play).toHaveBeenCalled();
+    expect(screen.getByText('CÂU MẪU · NGHE VÀ CHỌN ĐÁP ÁN')).toBeInTheDocument();
+    expect(screen.getByText('Câu mẫu · không tính điểm')).toBeInTheDocument();
+    expect(screen.getByText('Bài chính có 3 câu và được chấm điểm riêng.')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('radio', { name: /あ/ }));
+    expect(screen.getByRole('status')).toHaveTextContent('Chính xác!');
+    expect(mockedApi.answerChapterTest).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu bài kiểm tra →' }));
+    expect(screen.getByText('1', { selector: 'strong' })).toBeInTheDocument();
     expect(screen.getByText('Chữ hiragana')).toBeInTheDocument();
     expect(screen.getByText('Giọng đọc: VOICEVOX:四国めたん')).toBeInTheDocument();
 
@@ -100,9 +116,39 @@ describe('ChapterTestPage', () => {
     expect(option('はさみ')).toBeInTheDocument();
   });
 
-  it('lets the learner change a circled option without moving on', async () => {
+  it('reveals the sample answer after an incorrect choice without saving it', async () => {
     renderTest();
     await settle();
+    fireEvent.click(screen.getByRole('radio', { name: /い/ }));
+    expect(screen.getByRole('status')).toHaveTextContent('Chưa đúng. Đáp án là あ.');
+    expect(mockedApi.answerChapterTest).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('radio', { name: /あ/ }));
+    expect(screen.getByRole('status')).toHaveTextContent('Chính xác!');
+    expect(mockedApi.answerChapterTest).not.toHaveBeenCalled();
+  });
+
+  it('shows the sample before resuming saved scored answers', async () => {
+    mockedApi.getChapterTest.mockResolvedValue({
+      ...test,
+      answered_count: 1,
+      questions: [{ ...questions[0]!, choice: 1 }, ...questions.slice(1)],
+    });
+    renderTest();
+    await settle();
+    expect(screen.getByText('CÂU MẪU · NGHE VÀ CHỌN ĐÁP ÁN')).toBeInTheDocument();
+    expect(screen.getByText('Câu mẫu · không tính điểm')).toBeInTheDocument();
+    expect(mockedApi.answerChapterTest).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu bài kiểm tra →' }));
+    expect(screen.getByText('2', { selector: 'strong' })).toBeInTheDocument();
+    expect(screen.getByText('1/3 đã chọn')).toBeInTheDocument();
+    expect(option('はさみ')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Câu 1, đã chọn b' })).toBeInTheDocument();
+    expect(mockedApi.answerChapterTest).not.toHaveBeenCalled();
+  });
+
+  it('lets the learner change a circled option without moving on', async () => {
+    renderTest();
+    await startScoredTest();
     fireEvent.click(option('ろ'));
     await settle();
     fireEvent.click(screen.getByRole('button', { name: 'Câu 1, đã chọn b' }));
@@ -116,7 +162,7 @@ describe('ChapterTestPage', () => {
 
   it('chooses with the keyboard', async () => {
     renderTest();
-    await settle();
+    await startScoredTest();
     fireEvent.keyDown(window, { key: 'c' });
     await settle();
     expect(mockedApi.answerChapterTest).toHaveBeenCalledWith('test-1', 0, 2);
@@ -129,7 +175,7 @@ describe('ChapterTestPage', () => {
   it('asks for confirmation before submitting with open questions', async () => {
     mockedApi.submitChapterTest.mockResolvedValue({ test: { ...test, status: 'completed' }, parts: [], questions: [] });
     renderTest();
-    await settle();
+    await startScoredTest();
     const [submit] = screen.getAllByRole('button', { name: 'Nộp bài' });
     fireEvent.click(submit!);
     expect(screen.getByRole('alert')).toHaveTextContent('Còn 3 câu chưa chọn');
@@ -145,13 +191,16 @@ describe('ChapterTestPage', () => {
     play.mockRejectedValue(new DOMException('blocked', 'NotAllowedError'));
     renderTest();
     await settle();
+    expect(screen.getByRole('button', { name: 'Nghe câu mẫu' })).toHaveTextContent('Bấm để nghe');
+    fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu bài kiểm tra →' }));
+    await settle();
     expect(screen.getByRole('button', { name: 'Nghe câu hỏi' })).toHaveTextContent('Bấm để nghe');
   });
 
   it('restores the previous choice when saving fails', async () => {
     mockedApi.answerChapterTest.mockRejectedValue(new Error('Mất kết nối'));
     renderTest();
-    await settle();
+    await startScoredTest();
     fireEvent.click(option('う'));
     await settle();
     expect(screen.getByRole('alert')).toBeInTheDocument();

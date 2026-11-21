@@ -157,9 +157,22 @@ def test_chapter_list_and_start(client: TestClient) -> None:
     assert test["total"] == 30
     assert test["correct_count"] is None
     assert test["audio_credit"] == "VOICEVOX:四国めたん"
+    assert test["example"] == {
+        "audio_url": "/assets/audio/0.mp3",
+        "options": ["あ", "い", "う", "え"],
+        "answer_index": 0,
+    }
     question = test["questions"][0]
     assert set(question) == {"position", "part", "part_label", "audio_url", "options", "choice"}
     assert question["audio_url"].startswith("/assets/audio/")
+    resumed = client.get(f"/api/tests/{test['id']}")
+    assert resumed.status_code == 200
+    assert resumed.json()["example"] == test["example"]
+    assert len(resumed.json()["questions"]) == test["total"] == QUESTION_COUNT
+    from app.models import ChapterTestQuestion
+
+    with client.app.state.session_factory() as db:
+        assert db.query(ChapterTestQuestion).filter_by(test_id=test["id"]).count() == QUESTION_COUNT
     assert client.get("/api/chapters").json()["chapters"][0]["active_test_id"] == test["id"]
 
 def test_answers_can_change_until_submit(client: TestClient) -> None:
@@ -170,7 +183,11 @@ def test_answers_can_change_until_submit(client: TestClient) -> None:
     assert first.json() == {"position": 0, "choice": 1, "total": 30, "answered_count": 1}
     changed = client.put(f"{url}/answers", headers=HEADERS, json={"position": 0, "choice": 2})
     assert changed.json()["answered_count"] == 1
-    assert client.get(url).json()["questions"][0]["choice"] == 2
+    detail = client.get(url).json()
+    assert detail["questions"][0]["choice"] == 2
+    assert detail["answered_count"] == 1
+    assert detail["total"] == QUESTION_COUNT
+    assert detail["example"]["answer_index"] == 0
     bad_position = client.put(f"{url}/answers", headers=HEADERS, json={"position": 30, "choice": 0})
     assert bad_position.status_code == 422
     bad_choice = client.put(f"{url}/answers", headers=HEADERS, json={"position": 1, "choice": 4})
@@ -197,7 +214,10 @@ def test_submit_scores_and_reveals(client: TestClient) -> None:
     assert body["test"]["status"] == "completed"
     assert body["test"]["correct_count"] == 15
     assert body["test"]["answered_count"] == 20
-    assert sum(part["total"] for part in body["parts"]) == 30
+    assert body["test"]["total"] == QUESTION_COUNT
+    assert "example" not in body["test"]
+    assert len(body["questions"]) == QUESTION_COUNT
+    assert sum(part["total"] for part in body["parts"]) == QUESTION_COUNT
     assert sum(part["correct"] for part in body["parts"]) == 15
     unanswered = body["questions"][25]
     assert unanswered["choice"] is None and unanswered["is_correct"] is False
