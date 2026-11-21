@@ -162,7 +162,7 @@ export function PracticePage() {
 
       <section className={`question-card${feedback ? feedback.result.is_correct ? ' question-correct' : ' question-wrong' : ''}`} aria-labelledby="question-prompt">
         <div className="question-overline">
-          <span className="eyebrow">HÃY ĐỌC THÀNH TIẾNG</span>
+          <span className="eyebrow">NHẬP CÁCH ĐỌC BẰNG ROMAJI</span>
           {current.is_focus && <span className="focus-badge"><span aria-hidden="true">↻</span> Ôn lại</span>}
         </div>
         <div className="question-content">

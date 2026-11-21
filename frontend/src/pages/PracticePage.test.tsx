@@ -87,6 +87,8 @@ describe('PracticePage', () => {
     const { container } = renderPractice();
     await settle();
     expect(screen.getByText('あ')).toBeInTheDocument();
+    expect(screen.getByText('NHẬP CÁCH ĐỌC BẰNG ROMAJI')).toBeInTheDocument();
+    expect(screen.queryByText('HÃY ĐỌC THÀNH TIẾNG')).not.toBeInTheDocument();
     expect(screen.getByText('Ôn lại')).toBeInTheDocument();
     const input = screen.getByLabelText('Cách đọc romaji');
     expect(input).toHaveAttribute('autocomplete', 'off');
